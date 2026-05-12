@@ -21,12 +21,6 @@ the app interface:
 
 None of this information leaves your device.
 
-## Internet Speed Testing
-
-To measure your internet speed, the App connects to public Cloudflare 
-endpoints (speed.cloudflare.com) to download and upload test data. 
-Cloudflare's privacy policy applies to these connections: 
-https://www.cloudflare.com/privacypolicy/
 
 ## Permissions
 
@@ -48,4 +42,4 @@ by updating the "Last updated" date.
 
 If you have questions about this Privacy Policy, contact us at:
 
-**Email**: support@shoonay.com
+**Email**: shoonay.com@gmail.com
