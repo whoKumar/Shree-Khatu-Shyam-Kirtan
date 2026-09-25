@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.whokumar.khatushyamkirtan",
+      "sha256_cert_fingerprints": [
+        "EA:73:C2:6E:5F:D1:74:47:F9:75:99:4D:58:C0:76:EB:B0:1E:FB:DB:AD:F0:4F:75:0A:4B:37:66:C3:52:06:B5",
+        "E7:92:68:18:48:5C:DD:84:F6:0B:6F:08:B5:A4:5F:97:C7:A2:54:70:44:AB:33:4D:39:A1:93:FA:65:A4:26:05"
+      ]
+    }
+  }
+]

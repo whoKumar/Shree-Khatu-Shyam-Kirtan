@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khatu Shyam Ji — Live Link</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      background: linear-gradient(160deg, #140b4f, #2e1478 55%, #4e22a8);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #f8f1ff;
+    }
+    .card {
+      width: 100%;
+      max-width: 400px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(247,195,95,0.3);
+      border-radius: 22px;
+      padding: 30px 22px;
+      text-align: center;
+    }
+    .jai { color: #f7c35f; font-size: 13px; font-weight: 700; letter-spacing: 1px; }
+    h1 { font-size: 21px; margin: 12px 0 8px; }
+    p { font-size: 14.5px; line-height: 1.6; color: rgba(248,241,255,0.75); margin: 0 0 22px; }
+    a.btn {
+      display: block;
+      text-decoration: none;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 15.5px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .primary { background: #f7c35f; color: #3d1a7a; }
+    .ghost { border: 1.5px solid #f7c35f; color: #f7c35f; }
+    .note { font-size: 12.5px; color: rgba(248,241,255,0.5); margin: 4px 0 0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="jai">|| जय श्री श्याम ||</div>
+    <h1>Live Link — PDF</h1>
+    <p>यह PDF <strong>Khatu Shyam Ji Kirtan</strong> app में खुलेगी। App पहले से है तो नीचे वाले button से खोलें, वरना install करें — install के बाद यही link दोबारा खोलें।</p>
+
+    <a class="btn primary" id="openApp" href="#">App में खोलें</a>
+    <a class="btn ghost" id="install"
+       href="https://play.google.com/store/apps/details?id=com.whokumar.khatushyamkirtan">
+      Play Store से Install करें
+    </a>
+    <p class="note" id="note"></p>
+  </div>
+
+  <script>
+    (function () {
+      var PKG = 'com.whokumar.khatushyamkirtan';
+      var PLAY = 'https://play.google.com/store/apps/details?id=' + PKG;
+      var id = new URLSearchParams(location.search).get('id') || '';
+      var isAndroid = /android/i.test(navigator.userAgent);
+
+      // On Android an intent:// URL opens the app when installed and falls back
+      // to the Play Store when it isn't — one link, both cases.
+      var appUrl = isAndroid
+        ? 'intent://l/?id=' + encodeURIComponent(id) +
+          '#Intent;scheme=khatushyam;package=' + PKG +
+          ';S.browser_fallback_url=' + encodeURIComponent(PLAY) + ';end'
+        : 'khatushyam://l/?id=' + encodeURIComponent(id);
+
+      document.getElementById('openApp').setAttribute('href', appUrl);
+
+      if (!id) {
+        document.getElementById('note').textContent = 'इस link में कोई PDF id नहीं है।';
+        return;
+      }
+      // Installed users usually never see this page (the App Link opens the app
+      // directly); when they do land here, try the app once automatically.
+      if (isAndroid) setTimeout(function () { location.href = appUrl; }, 700);
+    })();
+  </script>
+</body>
+</html>
