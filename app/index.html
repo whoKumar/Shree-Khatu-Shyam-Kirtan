@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <title>Khatu Shyam Ji Kirtan</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <meta name="theme-color" content="#140b4f">
+<link rel="icon" href="/app/favicon.ico" /><meta name="khatu-web-app" content="1">
+<meta name="description" content="बाबा खाटू श्याम जी कीर्तन ऐप — रोज़ के दर्शन, पंचांग, आरती, भजन, कीर्तन और नाम जप। अब ब्राउज़र में भी।">
+<link rel="manifest" href="/app/manifest.json">
+<link rel="apple-touch-icon" href="/app/icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Khatu Shyam">
+<script>
+  // Wide screen and not already inside the frame → show the phone frame;
+  // the app itself then runs in the frame's iframe.
+  window.__KHATU_DESK = window.self === window.top &&
+    window.matchMedia('(min-width: 760px) and (min-height: 600px)').matches;
+  if (window.__KHATU_DESK) document.documentElement.className = 'desk';
+</script>
+<style>
+  body { background: #140b4f; }
+  #desk { display: none; }
+  html.desk body { margin: 0; overflow: auto; background: radial-gradient(120% 90% at 30% 10%, #4e22a8 0%, #2e1478 45%, #140b4f 100%) fixed; }
+  html.desk #root { display: none; }
+  html.desk #desk {
+    display: flex; align-items: center; justify-content: center; gap: 72px;
+    min-height: 100%; padding: 28px; box-sizing: border-box; color: #f8f1ff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Devanagari", "Nirmala UI", sans-serif;
+  }
+  .desk-side { max-width: 360px; }
+  .desk-brand { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 15px; letter-spacing: .3px; color: #f7c35f; }
+  .desk-brand span { width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center; font-size: 19px; background: linear-gradient(135deg, #f7c35f, #e6a820); }
+  .desk-side h1 { margin: 22px 0 10px; font-size: 34px; line-height: 1.25; font-weight: 900; }
+  .desk-side p { margin: 0 0 26px; font-size: 15.5px; line-height: 1.6; color: rgba(248,241,255,.72); }
+  .desk-btn { display: inline-block; padding: 13px 22px; border-radius: 14px; background: #f7c35f; color: #2e1478; font-weight: 900; text-decoration: none; box-shadow: 0 8px 26px rgba(247,195,95,.35); }
+  .desk-links { margin-top: 26px; font-size: 14px; }
+  .desk-links a { color: #f7c35f; text-decoration: none; font-weight: 700; margin-right: 18px; }
+  .desk-phone { flex: none; width: 412px; height: min(880px, calc(100vh - 56px)); padding: 12px; box-sizing: border-box; border-radius: 46px; background: #0b0620; box-shadow: 0 34px 90px rgba(0,0,0,.55), 0 0 0 2px rgba(247,195,95,.28); }
+  .desk-phone iframe { width: 100%; height: 100%; border: 0; border-radius: 35px; background: #140b4f; display: block; }
+  @media (max-width: 1040px) { .desk-side { display: none; } }
+</style>
+</head>
+
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+<div id="desk">
+  <div class="desk-side">
+    <div class="desk-brand"><span>🛕</span>खाटू श्याम जी कीर्तन</div>
+    <h1>वही ऐप, अब ब्राउज़र में भी</h1>
+    <p>रोज़ के दर्शन, पंचांग, आरती, भजन, कीर्तन और नाम जप — फ़ोन पर खोलें तो पूरी स्क्रीन पर, होम स्क्रीन पर जोड़ भी सकते हैं।</p>
+    <a class="desk-btn" href="https://play.google.com/store/apps/details?id=com.whokumar.khatushyamkirtan" target="_blank" rel="noopener">Google Play से ऐप डाउनलोड करें</a>
+    <div class="desk-links"><a href="/darshan/">आज के दर्शन</a><a href="/panchang/">पंचांग</a><a href="/">होम</a></div>
+  </div>
+  <div class="desk-phone"><iframe id="desk-frame" title="Khatu Shyam Ji Kirtan"></iframe></div>
+</div>
+  <script>
+    if (window.__KHATU_DESK) document.getElementById('desk-frame').src = location.pathname + location.search;
+    else { var s = document.createElement('script'); s.src = "/app/_expo/static/js/web/index-5b375d5d8e8dc75a1003d8217cca5e79.js"; document.body.appendChild(s); }
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "Khatu Shyam Ji Kirtan",
+  "short_name": "Khatu Shyam",
+  "lang": "hi",
+  "start_url": "/app/",
+  "scope": "/app/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#140b4f",
+  "theme_color": "#140b4f",
+  "icons": [
+    {
+      "src": "/app/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
