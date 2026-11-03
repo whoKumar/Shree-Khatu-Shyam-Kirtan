@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="khatu-page" content="darshan;v=2026-11-03T10:26:36Z;bridge=1">
+<meta name="khatu-page" content="darshan;v=2026-11-03T10:59:23Z;bridge=1">
 <meta name="theme-color" content="#3a0b1f">
 <title>आज के दर्शन — बाबा खाटू श्याम जी</title>
 <meta name="description" content="बाबा खाटू श्याम जी के आज के दिव्य दर्शन — रोज़ नए दर्शन, परिवार व मित्रों के साथ शेयर करें। जय श्री श्याम 🙏">
@@ -112,6 +112,16 @@ html.in-app, html.in-app body {
 }
 html.in-app ::-webkit-scrollbar { display: none; width: 0; height: 0; }
 html.in-app :focus-visible { outline: none; }
+/* The native screen paints the same gradient under the transparent WebView:
+   one continuous background, no seam where native and web meet. */
+html.in-app { background: transparent; }
+html.in-app .backdrop { display: none; }
+
+/* Kept alive off screen in the app (tab not shown, sheet closed): stop the
+   decorative animations so a hidden page costs no battery. */
+html.app-hidden *, html.app-hidden *::before, html.app-hidden *::after {
+  animation-play-state: paused !important;
+}
 
 /* Press feedback, matching TouchableOpacity. */
 .tap { transition: opacity 0.12s ease, transform 0.12s ease; }
@@ -461,7 +471,7 @@ html.on-web .wrap { padding-top: 22px; }
    the page (the app or a browser), the message bridge to the app, language,
    India-time formatting and the website header/footer.
    Inside the app, window.__APP__ is injected before the page loads:
-   { v, lang, platform, insets: { top, bottom }, deviceId, appVersion }. */
+   { v, lang, platform, insets: { top, bottom }, deviceId, appVersion, active }. */
 (function () {
   'use strict';
 
@@ -486,6 +496,8 @@ html.on-web .wrap { padding-top: 22px; }
     document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
     document.addEventListener('gesturestart', function (e) { e.preventDefault(); });
     document.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    // Pages are prebuilt off screen; animations pause until shown.
+    if (env.active === false) root.classList.add('app-hidden');
   }
   // Lets :active press styles fire on touch screens.
   document.addEventListener('touchstart', function () {}, { passive: true });
@@ -695,6 +707,8 @@ html.on-web .wrap { padding-top: 22px; }
   window.__onAppMessage = function (msg) {
     if (!msg) return;
     if (msg.t === 'lang' && LANGS.indexOf(msg.lang) >= 0) KA.lang = msg.lang;
+    if (msg.t === 'blur') root.classList.add('app-hidden');
+    else if (msg.t === 'focus' || msg.t === 'open') root.classList.remove('app-hidden');
     handlers.forEach(function (fn) {
       try { fn(msg); } catch (e) { /* keep other handlers running */ }
     });
@@ -1577,7 +1591,8 @@ window.KP = { panchang: req("./panchang"), ekadashi: req("./ekadashi") };
   var app = document.getElementById('app');
   var timer = null;
   var resumeAt = 0;
-  var hidden = false;
+  // Prebuilt off screen in the app: the carousel waits until it's shown.
+  var hidden = !!(KA.env && KA.env.active === false);
 
   function head() {
     var d = KA.today();
