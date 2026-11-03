@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="khatu-page" content="notfound;v=2026-11-03T10:59:23Z;bridge=1">
+<meta name="khatu-page" content="notfound;v=2026-11-03T11:32:52Z;bridge=1">
 <meta name="theme-color" content="#3a0b1f">
 <title>आज के दर्शन — बाबा खाटू श्याम जी</title>
 <meta name="description" content="बाबा खाटू श्याम जी के आज के दिव्य दर्शन — रोज़ नए दर्शन, परिवार व मित्रों के साथ शेयर करें। जय श्री श्याम 🙏">
@@ -313,6 +313,33 @@ html.app-hidden *, html.app-hidden *::before, html.app-hidden *::after {
 html.on-web .wrap { padding-top: 22px; }
 
 .head { padding: 4px 2px 14px; }
+/* In the app the header stays pinned under the status bar, like the native
+   tabs' headers; scrolled content passes beneath it, never under the clock.
+   At rest it has no background of its own (the native gradient shows
+   through — no band at its edge); once content scrolls under it, it fades
+   in a background and lifts with a hairline. */
+html.in-app .head {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin: calc(-14px - var(--safe-top)) -16px 4px;
+  padding: calc(14px + var(--safe-top)) 18px 12px;
+  transition: box-shadow 0.2s ease;
+}
+html.in-app .head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, #14030c, #1e0511);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+html.in-app.scrolled .head::before { opacity: 1; }
+html.in-app.scrolled .head { box-shadow: 0 1px 0 rgba(247, 195, 95, 0.14), 0 8px 18px rgba(0, 0, 0, 0.35); }
 .title { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 25px; font-weight: 900; letter-spacing: 0.2px; line-height: 1.2; }
 .shine {
   background: linear-gradient(90deg, #fff1cc 0%, #f7c35f 30%, #fff1cc 50%, #f7c35f 70%, #fff1cc 100%);
@@ -1770,6 +1797,12 @@ window.KP = { panchang: req("./panchang"), ekadashi: req("./ekadashi") };
       if (Date.now() - state.fetchedAt > 5 * 60000) fetchLatest();
     } else if (m.t === 'blur') hidden = true;
   });
+
+  if (KA.inApp) {
+    window.addEventListener('scroll', function () {
+      document.documentElement.classList.toggle('scrolled', window.scrollY > 4);
+    }, { passive: true });
+  }
 
   KA.chrome(notFound ? '' : 'darshan');
   render();
