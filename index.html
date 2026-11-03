@@ -48,6 +48,34 @@
       max-width: 340px;
     }
 
+    /* ── Live: today's darshan & panchang ── */
+    .live {
+      display: grid;
+      gap: 10px;
+      width: 100%;
+      max-width: 420px;
+      margin-bottom: 28px;
+    }
+    .live-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      text-decoration: none;
+      text-align: left;
+      color: #F8F1FF;
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(247,195,95,0.35);
+      transition: transform 0.15s, border-color 0.15s;
+    }
+    .live-card:hover { transform: translateY(-2px); border-color: #f7c35f; }
+    .live-icon { font-size: 26px; flex-shrink: 0; }
+    .live-text { flex: 1; min-width: 0; }
+    .live-text b { display: block; font-size: 15px; font-weight: 800; }
+    .live-text small { display: block; margin-top: 2px; font-size: 12px; color: rgba(248,241,255,0.60); }
+    .live-arrow { color: #f7c35f; font-size: 24px; font-weight: 700; line-height: 1; }
+
     /* ── Download Button ── */
     .download-btn {
       display: inline-flex;
@@ -150,6 +178,19 @@
     <div class="app-icon">🛕</div>
     <h1>Khatu Shyam Ji Kirtan</h1>
     <p class="tagline">Bhajan, Aarti, Kirtan, Katha, Darshan aur Panchang — sab ek hi jagah. Free.</p>
+
+    <div class="live">
+      <a class="live-card" href="/darshan/">
+        <span class="live-icon">🌸</span>
+        <span class="live-text"><b>आज के दर्शन</b><small>Baba Shyam ke aaj ke divya darshan</small></span>
+        <span class="live-arrow">›</span>
+      </a>
+      <a class="live-card" href="/panchang/">
+        <span class="live-icon">📅</span>
+        <span class="live-text"><b>आज का पंचांग</b><small>Tithi, Ekadashi, vrat aur tyohar — Khatu Dham ke anusaar</small></span>
+        <span class="live-arrow">›</span>
+      </a>
+    </div>
 
     <a class="download-btn" href="https://play.google.com/store/apps/details?id=com.whokumar.khatushyamkirtan" target="_blank">
       <!-- Google Play icon -->

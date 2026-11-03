@@ -1,0 +1,1766 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="khatu-page" content="notfound;v=2026-11-03T10:26:36Z;bridge=1">
+<meta name="theme-color" content="#3a0b1f">
+<title>आज के दर्शन — बाबा खाटू श्याम जी</title>
+<meta name="description" content="बाबा खाटू श्याम जी के आज के दिव्य दर्शन — रोज़ नए दर्शन, परिवार व मित्रों के साथ शेयर करें। जय श्री श्याम 🙏">
+<meta property="og:type" content="website">
+<meta property="og:title" content="आज के दर्शन — बाबा खाटू श्याम जी">
+<meta property="og:description" content="बाबा श्याम के आज के दिव्य दर्शन। जय श्री श्याम 🙏">
+<style>
+/* Shared look for the app's web pages. Every page is shown two ways: inside
+   the app (html.in-app — must be indistinguishable from native screens) and
+   on khatu.shoonay.world (html.on-web — gets the site header and footer). */
+
+:root {
+  --gold: #f7c35f;
+  --saffron: #ff8f3e;
+  --ink: #f8f1ff;
+  --ink-2: rgba(248, 241, 255, 0.75);
+  --ink-3: rgba(248, 241, 255, 0.55);
+  --ink-4: rgba(248, 241, 255, 0.32);
+  --line: rgba(247, 195, 95, 0.25);
+  --line-2: rgba(247, 195, 95, 0.45);
+  --card: rgba(255, 255, 255, 0.07);
+  --card-2: rgba(255, 255, 255, 0.12);
+  --on-gold: #3d1a7a;
+  --major: #ec4b9b;
+  --ekadashi: #ffd84d;
+  --pradosh: #b9bec6;
+  --krishna: rgba(150, 235, 185, 0.85);
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --font: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Noto Sans",
+    "Noto Sans Devanagari", "Noto Sans Gurmukhi", "Noto Sans Gujarati",
+    "Nirmala UI", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: var(--bg-end);
+}
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: var(--font);
+  color: var(--ink);
+  line-height: 1.35;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+/* Fixed backdrop: the colour at the bottom edge never moves, so in the app it
+   always meets the native tab bar / sheet edge without a seam. */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: var(--bg);
+}
+.backdrop i {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow, rgba(247, 195, 95, 0.16)), transparent 68%);
+  will-change: transform;
+  animation: drift 16s ease-in-out infinite alternate;
+}
+.backdrop i:nth-child(1) { width: 70vmax; height: 70vmax; top: -30vmax; right: -25vmax; }
+.backdrop i:nth-child(2) { width: 60vmax; height: 60vmax; bottom: -30vmax; left: -25vmax; animation-duration: 21s; opacity: 0.7; }
+@keyframes drift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(-4vmax, 3vmax, 0) scale(1.08); }
+}
+
+img { -webkit-user-drag: none; user-select: none; }
+a { color: inherit; text-decoration: none; }
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+  text-align: inherit;
+}
+button:disabled { cursor: default; }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* In the app: no selection, callouts, focus rings or scrollbars — the page
+   has to behave like a native screen. */
+html.in-app, html.in-app body {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  scrollbar-width: none;
+}
+html.in-app ::-webkit-scrollbar { display: none; width: 0; height: 0; }
+html.in-app :focus-visible { outline: none; }
+
+/* Press feedback, matching TouchableOpacity. */
+.tap { transition: opacity 0.12s ease, transform 0.12s ease; }
+.tap:active { opacity: 0.7; }
+.press:active { transform: scale(0.97); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.skel {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+.skel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.10), transparent);
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+@keyframes shimmer { to { transform: translateX(100%); } }
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(20px + var(--safe-bottom));
+  z-index: 60;
+  max-width: calc(100% - 32px);
+  padding: 11px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(16, 8, 34, 0.94);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+  color: var(--ink);
+  font-size: 13.5px;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0;
+  transform: translate(-50%, 16px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* ── Website header & footer (never shown in the app) ────────────────────── */
+
+.site-bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: calc(10px + var(--safe-top)) max(16px, calc((100vw - 1180px) / 2)) 10px;
+  background: rgba(8, 4, 20, 0.5);
+  -webkit-backdrop-filter: saturate(1.5) blur(14px);
+  backdrop-filter: saturate(1.5) blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.brand { display: flex; align-items: center; gap: 9px; min-width: 0; font-weight: 900; font-size: 15.5px; letter-spacing: 0.2px; }
+.brand-icon {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  background: linear-gradient(135deg, #f7c35f, #e6a820);
+  box-shadow: 0 4px 14px rgba(247, 195, 95, 0.35);
+}
+.brand-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.site-nav {
+  display: flex;
+  gap: 2px;
+  margin-left: auto;
+  padding: 3px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.site-nav a {
+  padding: 7px 13px;
+  border-radius: 9px;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--ink-2);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.site-nav a.active { background: var(--gold); color: var(--on-gold); }
+.lang {
+  position: relative;
+  flex: none;
+}
+.lang select {
+  -webkit-appearance: none;
+  appearance: none;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 11px;
+  padding: 8px 26px 8px 11px;
+  cursor: pointer;
+}
+.lang select option { color: #1b1030; }
+.lang::after {
+  content: "";
+  position: absolute;
+  right: 11px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -5px;
+  border-right: 2px solid var(--ink-2);
+  border-bottom: 2px solid var(--ink-2);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.site-foot {
+  max-width: 760px;
+  margin: 28px auto 0;
+  padding: 0 16px calc(28px + var(--safe-bottom));
+  text-align: center;
+}
+.get-app {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  text-align: left;
+  background: linear-gradient(135deg, rgba(247, 195, 95, 0.18), rgba(247, 195, 95, 0.05));
+  border: 1px solid var(--line-2);
+  border-radius: 20px;
+}
+.get-app-icon {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  background: linear-gradient(135deg, #f7c35f, #e6a820);
+}
+.get-app-body { flex: 1; min-width: 0; }
+.get-app-title { display: block; font-weight: 900; font-size: 15px; }
+.get-app-sub { display: block; margin-top: 2px; font-size: 12.5px; color: var(--ink-3); line-height: 1.45; }
+.get-app-btn {
+  flex: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--gold);
+  color: var(--on-gold);
+  font-weight: 900;
+  font-size: 13.5px;
+  box-shadow: 0 6px 18px rgba(247, 195, 95, 0.3);
+}
+.foot-links { margin-top: 22px; font-size: 12.5px; color: var(--ink-4); line-height: 2; }
+.foot-links a { color: var(--ink-3); margin: 0 8px; }
+.foot-links a:hover { color: var(--gold); }
+
+@media (max-width: 420px) {
+  .brand-name { display: none; }
+  .get-app { flex-wrap: wrap; }
+  .get-app-btn { width: 100%; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+
+:root {
+  --bg: linear-gradient(170deg, #14030c 0%, #3a0b1f 52%, #5a1430 100%);
+  --bg-end: #5a1430;
+  --glow: rgba(247, 195, 95, 0.15);
+}
+
+.wrap { max-width: 600px; margin: 0 auto; padding: calc(14px + var(--safe-top)) 16px calc(26px + var(--safe-bottom)); }
+html.on-web .wrap { padding-top: 22px; }
+
+.head { padding: 4px 2px 14px; }
+.title { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 25px; font-weight: 900; letter-spacing: 0.2px; line-height: 1.2; }
+.shine {
+  background: linear-gradient(90deg, #fff1cc 0%, #f7c35f 30%, #fff1cc 50%, #f7c35f 70%, #fff1cc 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 7s linear infinite;
+}
+@keyframes shine { to { background-position: -200% center; } }
+.sub { margin-top: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; font-size: 13px; font-weight: 700; color: var(--ink-2); }
+.tithi-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 9px 5px 10px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--gold);
+  background: rgba(247, 195, 95, 0.15);
+  border: 1px solid rgba(247, 195, 95, 0.45);
+}
+.tithi-chip svg { width: 14px; height: 14px; stroke: var(--gold); }
+
+/* ── Carousel ── */
+.viewer { position: relative; }
+.track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  border-radius: 24px;
+}
+.track::-webkit-scrollbar { display: none; }
+.slide { position: relative; flex: 0 0 100%; display: block; scroll-snap-align: center; scroll-snap-stop: always; }
+.frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.18;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid var(--gold);
+  background: rgba(0, 0, 0, 0.25);
+}
+.frame img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.35s ease; }
+.frame img.in { opacity: 1; }
+.frame.broken { display: grid; place-items: center; }
+.frame.broken img { display: none; }
+.frame.broken::before { content: "🙏"; font-size: 44px; opacity: 0.6; }
+.viewer-glow { position: absolute; inset: 10% 6% -4%; z-index: -1; border-radius: 30px; background: radial-gradient(closest-side, rgba(247, 195, 95, 0.32), transparent); filter: blur(18px); }
+.zoom {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.45);
+}
+.zoom svg { width: 16px; height: 16px; stroke: #fff; }
+.dots { display: flex; justify-content: center; gap: 6px; margin-top: 12px; }
+.dots i { width: 7px; height: 7px; border-radius: 4px; background: rgba(248, 241, 255, 0.3); transition: width 0.25s ease, background 0.25s ease; }
+.dots i.on { width: 18px; background: var(--gold); }
+
+/* ── Share ── */
+.share-box { margin-top: 16px; text-align: center; }
+.share-prompt { margin: 0 0 11px; font-size: 13px; font-weight: 600; line-height: 1.5; color: var(--ink-2); }
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 172px;
+  padding: 13px 24px;
+  border-radius: 26px;
+  background: var(--gold);
+  color: var(--on-gold);
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 0 22px rgba(247, 195, 95, 0.45);
+  animation: pulse 1.9s ease-in-out infinite;
+}
+.share-btn svg { width: 17px; height: 17px; stroke: var(--on-gold); }
+.share-btn:active { animation: none; transform: scale(0.96); }
+@keyframes pulse { 50% { transform: scale(1.05); box-shadow: 0 0 32px rgba(247, 195, 95, 0.65); } }
+.updated { margin: 12px 0 0; text-align: center; font-size: 11.5px; font-weight: 700; color: var(--ink-4); }
+
+/* ── States ── */
+.state { padding: 34px 20px; text-align: center; }
+.state-icon { font-size: 44px; }
+.state p { margin: 12px 0 0; font-size: 14.5px; font-weight: 700; line-height: 1.5; color: var(--ink-2); }
+.retry { margin-top: 16px; padding: 10px 18px; border-radius: 13px; font-size: 13.5px; font-weight: 800; color: var(--gold); border: 1.5px solid var(--gold); }
+
+/* ── Link cards ── */
+.links { margin-top: 20px; display: grid; gap: 10px; }
+.link-card { display: flex; align-items: center; gap: 12px; width: 100%; padding: 13px 14px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); }
+.li-icon { flex: none; width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; font-size: 22px; }
+.li-icon svg { width: 24px; height: 24px; }
+.li-icon.wa { background: rgba(37, 211, 102, 0.16); }
+.li-icon.gold { background: linear-gradient(135deg, #f7c35f, #ff8f3e); }
+.li-icon.gold svg { stroke: var(--on-gold); }
+.li-body { flex: 1; min-width: 0; text-align: left; }
+.li-body b { display: block; font-size: 14.5px; font-weight: 800; }
+.li-body small { display: block; margin-top: 2px; font-size: 12px; font-weight: 600; color: var(--ink-3); }
+.chev { flex: none; width: 20px; height: 20px; stroke: var(--ink-3); }
+
+/* ── 404 note (website only — /404.html is this page with data-variant="404") ── */
+.nf { max-width: 600px; margin: 0 auto; padding: 18px 16px 0; }
+.nf:empty { display: none; }
+.nf-card { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); }
+.nf-code { flex: none; font-size: 30px; font-weight: 900; letter-spacing: 1px; color: var(--gold); }
+.nf-text { flex: 1; min-width: 0; }
+.nf-text b { display: block; font-size: 15px; font-weight: 900; }
+.nf-text small { display: block; margin-top: 2px; font-size: 12.5px; font-weight: 600; line-height: 1.45; color: var(--ink-3); }
+.nf-home { flex: none; padding: 10px 14px; border-radius: 12px; background: var(--gold); color: var(--on-gold); font-size: 13px; font-weight: 900; }
+@media (max-width: 420px) {
+  .nf-card { flex-wrap: wrap; }
+  .nf-home { width: 100%; text-align: center; }
+}
+
+/* ── Website lightbox ── */
+.lb { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: rgba(0, 0, 0, 0.94); opacity: 0; transition: opacity 0.2s ease; }
+.lb.show { opacity: 1; }
+.lb img { max-width: 100vw; max-height: 100vh; max-height: 100dvh; object-fit: contain; }
+.lb-btn { position: absolute; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, 0.16); }
+.lb-btn svg { width: 24px; height: 24px; stroke: #fff; }
+.lb-close { top: calc(14px + var(--safe-top)); right: 16px; }
+.lb-prev { left: 16px; top: 50%; margin-top: -23px; }
+.lb-next { right: 16px; top: 50%; margin-top: -23px; }
+.lb .share-btn { position: absolute; left: 50%; bottom: calc(26px + var(--safe-bottom)); transform: translateX(-50%); animation: none; }
+
+@media (min-width: 960px) {
+  .wrap {
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
+    grid-template-areas: "viewer head" "viewer share" "viewer links" "viewer rest";
+    grid-template-rows: auto auto auto 1fr;
+    column-gap: 44px;
+    padding-top: 36px;
+  }
+  .head { grid-area: head; padding-top: 24px; }
+  .title { font-size: 36px; }
+  .sub { font-size: 14.5px; }
+  .viewer, .state { grid-area: viewer; }
+  .share-box { grid-area: share; text-align: left; margin-top: 8px; }
+  .updated { text-align: left; }
+  .links { grid-area: links; margin-top: 24px; }
+  .nf { max-width: 1080px; padding-top: 28px; }
+}
+</style>
+<script>/* Shared runtime for the app's web pages, exposed as window.KA: who is hosting
+   the page (the app or a browser), the message bridge to the app, language,
+   India-time formatting and the website header/footer.
+   Inside the app, window.__APP__ is injected before the page loads:
+   { v, lang, platform, insets: { top, bottom }, deviceId, appVersion }. */
+(function () {
+  'use strict';
+
+  var env = window.__APP__ || null;
+  var inApp = !!env;
+  var root = document.documentElement;
+  root.classList.add(inApp ? 'in-app' : 'on-web');
+
+  var store = {
+    get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) { /* storage off */ } },
+  };
+
+  if (inApp) {
+    if (env.insets) {
+      root.style.setProperty('--safe-top', (env.insets.top || 0) + 'px');
+      root.style.setProperty('--safe-bottom', (env.insets.bottom || 0) + 'px');
+    }
+    // Inside the app the page must never zoom, select or pop a context menu.
+    var vp = document.querySelector('meta[name="viewport"]');
+    if (vp) vp.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover');
+    document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+    document.addEventListener('gesturestart', function (e) { e.preventDefault(); });
+    document.addEventListener('dragstart', function (e) { e.preventDefault(); });
+  }
+  // Lets :active press styles fire on touch screens.
+  document.addEventListener('touchstart', function () {}, { passive: true });
+
+  // ─── Language ──────────────────────────────────────────────────────────────
+  var LANGS = ['hi', 'en', 'pa', 'gu'];
+
+  // App language when hosted; on the web ?lang=, then the last choice, then
+  // Punjabi/Gujarati browsers, else Hindi (most visitors read Hindi even with
+  // an English browser).
+  function initialLang() {
+    if (inApp && LANGS.indexOf(env.lang) >= 0) return env.lang;
+    var q = null;
+    try { q = new URLSearchParams(location.search).get('lang'); } catch (e) { /* old browser */ }
+    if (LANGS.indexOf(q) >= 0) return q;
+    var saved = store.get('kd_lang');
+    if (LANGS.indexOf(saved) >= 0) return saved;
+    var nav = String(navigator.language || '').slice(0, 2).toLowerCase();
+    return nav === 'pa' || nav === 'gu' ? nav : 'hi';
+  }
+
+  var COMMON = {
+    days: {
+      hi: ['रविवार', 'सोमवार', 'मंगलवार', 'बुधवार', 'गुरुवार', 'शुक्रवार', 'शनिवार'],
+      en: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      pa: ['ਐਤਵਾਰ', 'ਸੋਮਵਾਰ', 'ਮੰਗਲਵਾਰ', 'ਬੁੱਧਵਾਰ', 'ਵੀਰਵਾਰ', 'ਸ਼ੁੱਕਰਵਾਰ', 'ਸ਼ਨੀਵਾਰ'],
+      gu: ['રવિવાર', 'સોમવાર', 'મંગળવાર', 'બુધવાર', 'ગુરુવાર', 'શુક્રવાર', 'શનિવાર'],
+    },
+    daysShort: {
+      hi: ['र', 'सो', 'मं', 'बु', 'गु', 'शु', 'श'],
+      en: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+      pa: ['ਐ', 'ਸੋ', 'ਮੰ', 'ਬੁ', 'ਵੀ', 'ਸ਼ੁ', 'ਸ਼'],
+      gu: ['ર', 'સો', 'મં', 'બુ', 'ગુ', 'શુ', 'શ'],
+    },
+    months: {
+      hi: ['जनवरी', 'फरवरी', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर'],
+      en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      pa: ['ਜਨਵਰੀ', 'ਫਰਵਰੀ', 'ਮਾਰਚ', 'ਅਪ੍ਰੈਲ', 'ਮਈ', 'ਜੂਨ', 'ਜੁਲਾਈ', 'ਅਗਸਤ', 'ਸਤੰਬਰ', 'ਅਕਤੂਬਰ', 'ਨਵੰਬਰ', 'ਦਸੰਬਰ'],
+      gu: ['જાન્યુઆરી', 'ફેબ્રુઆરી', 'માર્ચ', 'એપ્રિલ', 'મે', 'જૂન', 'જુલાઈ', 'ઓગસ્ટ', 'સપ્ટેમ્બર', 'ઓક્ટોબર', 'નવેમ્બર', 'ડિસેમ્બર'],
+    },
+    today: { hi: 'आज', en: 'Today', pa: 'ਅੱਜ', gu: 'આજ' },
+    tomorrow: { hi: 'कल', en: 'Tomorrow', pa: 'ਕੱਲ੍ਹ', gu: 'કાલે' },
+    brand: { hi: 'खाटू श्याम जी', en: 'Khatu Shyam Ji', pa: 'ਖਾਟੂ ਸ਼ਿਆਮ ਜੀ', gu: 'ખાટુ શ્યામ જી' },
+    darshan: { hi: 'दर्शन', en: 'Darshan', pa: 'ਦਰਸ਼ਨ', gu: 'દર્શન' },
+    panchang: { hi: 'पंचांग', en: 'Panchang', pa: 'ਪੰਚਾਂਗ', gu: 'પંચાંગ' },
+    getApp: { hi: 'खाटू श्याम जी कीर्तन ऐप', en: 'Khatu Shyam Ji Kirtan app', pa: 'ਖਾਟੂ ਸ਼ਿਆਮ ਜੀ ਕੀਰਤਨ ਐਪ', gu: 'ખાટુ શ્યામ જી કીર્તન એપ' },
+    getAppSub: {
+      hi: 'रोज़ के दर्शन, भजन, आरती, कीर्तन और नाम जप — सब एक ही ऐप में। Free.',
+      en: 'Daily darshan, bhajan, aarti, kirtan and naam jap — all in one app. Free.',
+      pa: 'ਰੋਜ਼ ਦੇ ਦਰਸ਼ਨ, ਭਜਨ, ਆਰਤੀ, ਕੀਰਤਨ ਤੇ ਨਾਮ ਜਪ — ਸਭ ਇੱਕੋ ਐਪ ਵਿੱਚ। Free.',
+      gu: 'રોજના દર્શન, ભજન, આરતી, કીર્તન અને નામ જપ — બધું એક જ એપમાં. Free.',
+    },
+    install: { hi: 'डाउनलोड करें', en: 'Download', pa: 'ਡਾਊਨਲੋਡ ਕਰੋ', gu: 'ડાઉનલોડ કરો' },
+    privacy: { hi: 'Privacy Policy', en: 'Privacy Policy', pa: 'Privacy Policy', gu: 'Privacy Policy' },
+    terms: { hi: 'Terms & Conditions', en: 'Terms & Conditions', pa: 'Terms & Conditions', gu: 'Terms & Conditions' },
+  };
+  var LANG_NAMES = { hi: 'हिन्दी', en: 'English', pa: 'ਪੰਜਾਬੀ', gu: 'ગુજરાતી' };
+  var PLAY_URL = 'https://play.google.com/store/apps/details?id=com.whokumar.khatushyamkirtan';
+
+  // ─── India time ────────────────────────────────────────────────────────────
+  // Panchang is for Khatu, so clock times are always India time — a visitor
+  // in the US must not see a 6:42 AM sunrise as 8:12 PM. "Today" stays the
+  // device's date, like everywhere else in the app.
+  var IST_OFFSET = -330; // getTimezoneOffset() of India
+  function ist(d) {
+    return new Date(d.getTime() + (d.getTimezoneOffset() - IST_OFFSET) * 60000);
+  }
+  var inIndia = new Date().getTimezoneOffset() === IST_OFFSET;
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function startOfDay(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+
+  var handlers = [];
+  var readySent = false;
+  var toastTimer = null;
+
+  var KA = {
+    inApp: inApp,
+    env: env,
+    lang: initialLang(),
+    store: store,
+    PLAY_URL: PLAY_URL,
+
+    // ─── Bridge ──────────────────────────────────────────────────────────────
+    post: function (msg) {
+      try {
+        if (window.ReactNativeWebView) window.ReactNativeWebView.postMessage(JSON.stringify(msg));
+      } catch (e) { /* not hosted */ }
+    },
+    // First frame is on screen — the app fades the page in only after this,
+    // so a half-drawn page is never visible.
+    ready: function () {
+      if (readySent) return;
+      readySent = true;
+      var sent = false;
+      var go = function () { if (!sent) { sent = true; KA.post({ t: 'ready' }); } };
+      requestAnimationFrame(function () { requestAnimationFrame(go); });
+      setTimeout(go, 150);
+    },
+    haptic: function () { if (inApp) KA.post({ t: 'haptic' }); },
+    open: function (url) {
+      if (inApp) KA.post({ t: 'open', url: url });
+      else window.open(url, '_blank', 'noopener');
+    },
+    share: function (text, title) {
+      if (inApp) { KA.post({ t: 'share', text: text, title: title }); return; }
+      if (navigator.share) { navigator.share({ title: title, text: text }).catch(function () {}); return; }
+      window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank', 'noopener');
+    },
+    on: function (fn) { handlers.push(fn); },
+    setLang: function (l) {
+      if (LANGS.indexOf(l) < 0) return;
+      store.set('kd_lang', l);
+      try {
+        var u = new URL(location.href);
+        u.searchParams.set('lang', l);
+        history.replaceState(null, '', u.toString());
+      } catch (e) { /* old browser */ }
+      window.__onAppMessage({ t: 'lang', lang: l });
+    },
+
+    // ─── Strings & formatting ──────────────────────────────────────────────
+    tr: function (dict) { return dict[KA.lang] || dict.hi; },
+    C: function (key) { return KA.tr(COMMON[key]); },
+    fill: function (s, vars) {
+      return s.replace(/\{(\w+)\}/g, function (_, k) { return vars[k] != null ? vars[k] : ''; });
+    },
+    esc: function (s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    },
+    // The India calendar day an instant falls on, as a local-midnight Date
+    // (the shape the panchang lib takes).
+    istDay: function (d) { return startOfDay(ist(d)); },
+    today: function () { return startOfDay(new Date()); },
+    time: function (d) {
+      var t = ist(d), h = t.getHours();
+      return (h % 12 || 12) + ':' + pad(t.getMinutes()) + ' ' + (h < 12 ? 'AM' : 'PM') + (inIndia ? '' : ' IST');
+    },
+    dayMonth: function (d) { return d.getDate() + ' ' + KA.C('months')[d.getMonth()]; },
+    longDate: function (d) {
+      return KA.C('days')[d.getDay()] + ', ' + d.getDate() + ' ' + KA.C('months')[d.getMonth()] + ' ' + d.getFullYear();
+    },
+    dateKey: function (d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); },
+    addDays: function (d, n) { return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); },
+    sameDay: function (a, b) {
+      return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+    },
+
+    toast: function (msg) {
+      var el = document.getElementById('ka-toast');
+      if (!el) {
+        el = document.createElement('div');
+        el.id = 'ka-toast';
+        el.className = 'toast';
+        el.setAttribute('role', 'status');
+        document.body.appendChild(el);
+      }
+      el.textContent = msg;
+      // Force a reflow so a repeated toast animates in again.
+      void el.offsetWidth;
+      el.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { el.classList.remove('show'); }, 2600);
+    },
+
+    // ─── Website header & footer ─────────────────────────────────────────────
+    chrome: function (active) {
+      if (inApp) return;
+      var bar = document.createElement('header');
+      bar.className = 'site-bar';
+      var foot = document.createElement('footer');
+      foot.className = 'site-foot';
+      document.body.insertBefore(bar, document.body.firstChild);
+      document.body.appendChild(foot);
+      var esc = KA.esc;
+      var link = function (key) {
+        return '<a class="tap' + (key === active ? ' active' : '') + '" href="/' + key + '/">' + esc(KA.C(key)) + '</a>';
+      };
+      var paint = function () {
+        root.lang = KA.lang;
+        bar.innerHTML =
+          '<a class="brand tap" href="/"><span class="brand-icon">🛕</span><span class="brand-name">' + esc(KA.C('brand')) + '</span></a>' +
+          '<nav class="site-nav">' + link('darshan') + link('panchang') + '</nav>' +
+          '<label class="lang"><select aria-label="Language">' +
+          LANGS.map(function (l) {
+            return '<option value="' + l + '"' + (l === KA.lang ? ' selected' : '') + '>' + LANG_NAMES[l] + '</option>';
+          }).join('') +
+          '</select></label>';
+        foot.innerHTML =
+          '<a class="get-app tap" href="' + PLAY_URL + '" target="_blank" rel="noopener">' +
+          '<span class="get-app-icon">🛕</span>' +
+          '<span class="get-app-body"><span class="get-app-title">' + esc(KA.C('getApp')) + '</span>' +
+          '<span class="get-app-sub">' + esc(KA.C('getAppSub')) + '</span></span>' +
+          '<span class="get-app-btn">' + esc(KA.C('install')) + '</span></a>' +
+          '<div class="foot-links"><a href="/privacy-policy.html">' + esc(KA.C('privacy')) + '</a>' +
+          '<a href="/terms.html">' + esc(KA.C('terms')) + '</a>' +
+          '<div>© Khatu Shyam Ji Kirtan · Jai Shree Shyam 🙏</div></div>';
+        bar.querySelector('select').addEventListener('change', function () { KA.setLang(this.value); });
+      };
+      paint();
+      KA.on(function (m) { if (m.t === 'lang') paint(); });
+    },
+  };
+
+  // Messages from the app ({ t: 'open' | 'lang' | 'focus' | 'blur', … }).
+  window.__onAppMessage = function (msg) {
+    if (!msg) return;
+    if (msg.t === 'lang' && LANGS.indexOf(msg.lang) >= 0) KA.lang = msg.lang;
+    handlers.forEach(function (fn) {
+      try { fn(msg); } catch (e) { /* keep other handlers running */ }
+    });
+  };
+
+  root.lang = KA.lang;
+  window.KA = KA;
+})();
+</script>
+</head>
+<body data-variant="404">
+<div class="backdrop" aria-hidden="true"><i></i><i></i></div>
+<div class="nf" id="nf"></div>
+<main class="wrap" id="app"></main>
+<script>(function () {
+var defs = {
+"./panchang": function (module, exports, require) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.sunriseOf = sunriseOf;
+exports.getSunTimes = getSunTimes;
+exports.getEkadashiVrat = getEkadashiVrat;
+exports.getFestivalForDate = getFestivalForDate;
+exports.getDayEvents = getDayEvents;
+exports.getTithiIndicator = getTithiIndicator;
+exports.getPanchang = getPanchang;
+exports.tithiName = tithiName;
+exports.getTithiSpans = getTithiSpans;
+exports.getNextTithiInfo = getNextTithiInfo;
+exports.getPahar = getPahar;
+exports.getNextPaharInfo = getNextPaharInfo;
+const DEG2RAD = Math.PI / 180;
+function julianDay(date) {
+    return date.getTime() / 86400000 + 2440587.5;
+}
+function norm360(x) {
+    return ((x % 360) + 360) % 360;
+}
+function moonLongitude(date) {
+    const T = (julianDay(date) - 2451545.0) / 36525;
+    const Lp = norm360(218.3164477 + 481267.88123421 * T - 0.0015786 * T * T);
+    const D = norm360(297.8501921 + 445267.1114034 * T - 0.0018819 * T * T);
+    const M = norm360(357.5291092 + 35999.0502909 * T - 0.0001536 * T * T);
+    const Mp = norm360(134.9633964 + 477198.8675055 * T + 0.0087414 * T * T);
+    const F = norm360(93.2720950 + 483202.0175233 * T - 0.0036539 * T * T);
+    const terms = [
+        [0, 0, 1, 0, 6.288774],
+        [2, 0, -1, 0, 1.274027],
+        [2, 0, 0, 0, 0.658314],
+        [0, 0, 2, 0, 0.213618],
+        [0, 1, 0, 0, -0.185116],
+        [0, 0, 0, 2, -0.114332],
+        [2, 0, -2, 0, 0.058793],
+        [2, -1, -1, 0, 0.057066],
+        [2, 0, 1, 0, 0.053322],
+        [2, -1, 0, 0, 0.045758],
+        [0, 1, -1, 0, -0.040923],
+        [1, 0, 0, 0, -0.034720],
+        [0, 1, 1, 0, -0.030383],
+        [2, 0, 0, -2, 0.015327],
+        [0, 0, 1, 2, -0.012528],
+        [0, 0, 1, -2, 0.010980],
+        [4, 0, -1, 0, 0.010675],
+        [0, 0, 3, 0, 0.010034],
+        [4, 0, -2, 0, 0.008548],
+        [2, 1, -1, 0, -0.007888],
+        [2, 1, 0, 0, -0.006766],
+        [1, 0, -1, 0, -0.005163],
+        [1, 1, 0, 0, 0.004987],
+        [2, -1, 1, 0, 0.004036],
+    ];
+    let sigmaL = 0;
+    for (const [d, m, mp, f, a] of terms) {
+        sigmaL += a * Math.sin(DEG2RAD * (d * D + m * M + mp * Mp + f * F));
+    }
+    return norm360(Lp + sigmaL);
+}
+function sunLongitude(date) {
+    const T = (julianDay(date) - 2451545.0) / 36525;
+    const L0 = norm360(280.46646 + 36000.76983 * T + 0.0003032 * T * T);
+    const M = norm360(357.52911 + 35999.05029 * T - 0.0001537 * T * T);
+    const Mr = DEG2RAD * M;
+    const C = (1.914602 - 0.004817 * T - 0.000014 * T * T) * Math.sin(Mr) +
+        (0.019993 - 0.000101 * T) * Math.sin(2 * Mr) +
+        0.000289 * Math.sin(3 * Mr);
+    return norm360(L0 + C);
+}
+function elongation(date) {
+    return norm360(moonLongitude(date) - sunLongitude(date));
+}
+function tithiIndex(date) {
+    return Math.floor(elongation(date) / 12);
+}
+function findNextTithiBoundary(start, targetIdx) {
+    const startElong = elongation(start);
+    const targetElong = targetIdx * 12;
+    const targetForward = norm360(targetElong - startElong);
+    if (targetForward < 0.001)
+        return start;
+    let low = start.getTime();
+    let high = start.getTime() + 2 * 86400000;
+    for (let i = 0; i < 50; i++) {
+        const mid = (low + high) / 2;
+        const elapsed = norm360(elongation(new Date(mid)) - startElong);
+        if (elapsed < targetForward)
+            low = mid;
+        else
+            high = mid;
+    }
+    return new Date((low + high) / 2);
+}
+const REF_LAT = 27.36;
+const REF_LON = 75.40;
+function sunTimes(day) {
+    const n = Date.UTC(day.getFullYear(), day.getMonth(), day.getDate(), 12) / 86400000 + 2440587.5 - 2451545.0;
+    const jStar = n - REF_LON / 360;
+    const M = norm360(357.5291 + 0.98560028 * jStar);
+    const Mr = DEG2RAD * M;
+    const C = 1.9148 * Math.sin(Mr) + 0.02 * Math.sin(2 * Mr) + 0.0003 * Math.sin(3 * Mr);
+    const lambda = DEG2RAD * norm360(M + C + 180 + 102.9372);
+    const jTransit = 2451545.0 + jStar + 0.0053 * Math.sin(Mr) - 0.0069 * Math.sin(2 * lambda);
+    const decl = Math.asin(Math.sin(lambda) * Math.sin(DEG2RAD * 23.44));
+    const lat = DEG2RAD * REF_LAT;
+    const cosH = (Math.sin(DEG2RAD * -0.833) - Math.sin(lat) * Math.sin(decl)) / (Math.cos(lat) * Math.cos(decl));
+    const H = Math.acos(cosH) / DEG2RAD;
+    const toMs = (jd) => (jd - 2440587.5) * 86400000;
+    return { rise: toMs(jTransit - H / 360), set: toMs(jTransit + H / 360) };
+}
+function sunriseOf(day) {
+    return new Date(sunTimes(day).rise);
+}
+function getSunTimes(day) {
+    const { rise, set } = sunTimes(day);
+    return { rise: new Date(rise), set: new Date(set) };
+}
+function addDays(day, n) {
+    return new Date(day.getFullYear(), day.getMonth(), day.getDate() + n);
+}
+function kaalWindow(day, kaal) {
+    const { rise, set } = sunTimes(day);
+    const len = set - rise;
+    const midnight = set + (DAY_MS - len) / 2;
+    switch (kaal) {
+        case 'udaya': return [rise, rise];
+        case 'purvahna': return [rise + 0.2 * len, rise + 0.4 * len];
+        case 'madhyahna': return [rise + 0.4 * len, rise + 0.6 * len];
+        case 'aparahna': return [rise + 0.6 * len, rise + 0.8 * len];
+        case 'pradosh': return [set, set + 2.4 * 3600000];
+        case 'nishita': return [midnight - 0.4 * 3600000, midnight + 0.4 * 3600000];
+    }
+}
+const kaalTithiCache = new Map();
+function kaalTithis(day, kaal) {
+    const key = `${day.getFullYear()}-${day.getMonth()}-${day.getDate()}-${kaal}`;
+    let tis = kaalTithiCache.get(key);
+    if (!tis) {
+        const [a, b] = kaalWindow(day, kaal);
+        const ta = tithiIndex(new Date(a));
+        tis = [ta, a === b ? ta : tithiIndex(new Date(b))];
+        kaalTithiCache.set(key, tis);
+    }
+    return tis;
+}
+const sunriseTithi = (day) => kaalTithis(day, 'udaya')[0];
+const SYNODIC_RATE = 12.190749;
+const DAY_MS = 86400000;
+function refineNewMoon(guessMs) {
+    let t = guessMs;
+    for (let i = 0; i < 12; i++) {
+        let e = elongation(new Date(t));
+        if (e > 180)
+            e -= 360;
+        t -= (e / SYNODIC_RATE) * DAY_MS;
+    }
+    return t;
+}
+function siderealSunRashi(ms) {
+    const d = new Date(ms);
+    const T = (julianDay(d) - 2451545.0) / 36525;
+    const ayanamsa = 23.853 + 1.3969 * T;
+    return Math.floor(norm360(sunLongitude(d) - ayanamsa) / 30);
+}
+function lunarMonthAt(date) {
+    const startMs = refineNewMoon(date.getTime() - (elongation(date) / SYNODIC_RATE) * DAY_MS);
+    const endMs = refineNewMoon(startMs + 29.53 * DAY_MS);
+    const rashi = siderealSunRashi(startMs);
+    return { amant: (rashi + 1) % 12, adhik: rashi === siderealSunRashi(endMs), startMs };
+}
+function purnimantMonth(lm, tithi) {
+    return !lm.adhik && tithi >= 15 ? (lm.amant + 1) % 12 : lm.amant;
+}
+function getVikramSamvat(lm) {
+    return new Date(lm.startMs - lm.amant * 29.53 * DAY_MS).getFullYear() + 57;
+}
+const TITHI_NAMES = [
+    { hi: 'प्रतिपदा', en: 'Pratipada', pa: 'ਪ੍ਰਤਿਪਦਾ', gu: 'પ્રતિપદા' },
+    { hi: 'द्वितीया', en: 'Dwitiya', pa: 'ਦਵਿਤੀਯਾ', gu: 'દ્વિતીયા' },
+    { hi: 'तृतीया', en: 'Tritiya', pa: 'ਤ੍ਰਿਤੀਯਾ', gu: 'તૃતીયા' },
+    { hi: 'चतुर्थी', en: 'Chaturthi', pa: 'ਚਤੁਰਥੀ', gu: 'ચતુર્થી' },
+    { hi: 'पंचमी', en: 'Panchami', pa: 'ਪੰਚਮੀ', gu: 'પંચમી' },
+    { hi: 'षष्ठी', en: 'Shashthi', pa: 'ਸ਼ਸ਼ਠੀ', gu: 'ષષ્ઠી' },
+    { hi: 'सप्तमी', en: 'Saptami', pa: 'ਸਪਤਮੀ', gu: 'સપ્તમી' },
+    { hi: 'अष्टमी', en: 'Ashtami', pa: 'ਅਸ਼ਟਮੀ', gu: 'અષ્ટમી' },
+    { hi: 'नवमी', en: 'Navami', pa: 'ਨਵਮੀ', gu: 'નવમી' },
+    { hi: 'दशमी', en: 'Dashami', pa: 'ਦਸ਼ਮੀ', gu: 'દશમી' },
+    { hi: 'एकादशी', en: 'Ekadashi', pa: 'ਏਕਾਦਸ਼ੀ', gu: 'એકાદશી' },
+    { hi: 'द्वादशी', en: 'Dwadashi', pa: 'ਦਵਾਦਸ਼ੀ', gu: 'દ્વાદશી' },
+    { hi: 'त्रयोदशी', en: 'Trayodashi', pa: 'ਤ੍ਰਯੋਦਸ਼ੀ', gu: 'ત્રયોદશી' },
+    { hi: 'चतुर्दशी', en: 'Chaturdashi', pa: 'ਚਤੁਰਦਸ਼ੀ', gu: 'ચતુર્દશી' },
+    { hi: 'पूर्णिमा', en: 'Purnima', pa: 'ਪੂਰਨਮਾਸ਼ੀ', gu: 'પૂર્ણિમા' },
+    { hi: 'प्रतिपदा', en: 'Pratipada', pa: 'ਪ੍ਰਤਿਪਦਾ', gu: 'પ્રતિપદા' },
+    { hi: 'द्वितीया', en: 'Dwitiya', pa: 'ਦਵਿਤੀਯਾ', gu: 'દ્વિતીયા' },
+    { hi: 'तृतीया', en: 'Tritiya', pa: 'ਤ੍ਰਿਤੀਯਾ', gu: 'તૃતીયા' },
+    { hi: 'चतुर्थी', en: 'Chaturthi', pa: 'ਚਤੁਰਥੀ', gu: 'ચતુર્થી' },
+    { hi: 'पंचमी', en: 'Panchami', pa: 'ਪੰਚਮੀ', gu: 'પંચમી' },
+    { hi: 'षष्ठी', en: 'Shashthi', pa: 'ਸ਼ਸ਼ਠੀ', gu: 'ષષ્ઠી' },
+    { hi: 'सप्तमी', en: 'Saptami', pa: 'ਸਪਤਮੀ', gu: 'સપ્તમી' },
+    { hi: 'अष्टमी', en: 'Ashtami', pa: 'ਅਸ਼ਟਮੀ', gu: 'અષ્ટમી' },
+    { hi: 'नवमी', en: 'Navami', pa: 'ਨਵਮੀ', gu: 'નવમી' },
+    { hi: 'दशमी', en: 'Dashami', pa: 'ਦਸ਼ਮੀ', gu: 'દશમી' },
+    { hi: 'एकादशी', en: 'Ekadashi', pa: 'ਏਕਾਦਸ਼ੀ', gu: 'એકાદશી' },
+    { hi: 'द्वादशी', en: 'Dwadashi', pa: 'ਦਵਾਦਸ਼ੀ', gu: 'દ્વાદશી' },
+    { hi: 'त्रयोदशी', en: 'Trayodashi', pa: 'ਤ੍ਰਯੋਦਸ਼ੀ', gu: 'ત્રયોદશી' },
+    { hi: 'चतुर्दशी', en: 'Chaturdashi', pa: 'ਚਤੁਰਦਸ਼ੀ', gu: 'ચતુર્દશી' },
+    { hi: 'अमावस्या', en: 'Amavasya', pa: 'ਅਮਾਵਸਿਆ', gu: 'અમાવસ્યા' },
+];
+const PAKSHA = {
+    shukla: { hi: 'शुक्ल पक्ष', en: 'Shukla Paksha', pa: 'ਸ਼ੁਕਲ ਪੱਖ', gu: 'શુક્લ પક્ષ' },
+    krishna: { hi: 'कृष्ण पक्ष', en: 'Krishna Paksha', pa: 'ਕ੍ਰਿਸ਼ਨ ਪੱਖ', gu: 'કૃષ્ણ પક્ષ' },
+};
+const HINDU_MONTHS = [
+    { hi: 'चैत्र', en: 'Chaitra', pa: 'ਚੇਤ', gu: 'ચૈત્ર' },
+    { hi: 'वैशाख', en: 'Vaishakha', pa: 'ਵਿਸਾਖ', gu: 'વૈશાખ' },
+    { hi: 'ज्येष्ठ', en: 'Jyeshtha', pa: 'ਜੇਠ', gu: 'જ્યેષ્ઠ' },
+    { hi: 'आषाढ़', en: 'Ashadha', pa: 'ਹਾੜ੍ਹ', gu: 'અષાઢ' },
+    { hi: 'श्रावण', en: 'Shravana', pa: 'ਸਾਵਣ', gu: 'શ્રાવણ' },
+    { hi: 'भाद्रपद', en: 'Bhadrapada', pa: 'ਭਾਦੋਂ', gu: 'ભાદ્રપદ' },
+    { hi: 'आश्विन', en: 'Ashwin', pa: 'ਅੱਸੂ', gu: 'આશ્વિન' },
+    { hi: 'कार्तिक', en: 'Kartika', pa: 'ਕੱਤਕ', gu: 'કાર્તિક' },
+    { hi: 'मार्गशीर्ष', en: 'Margashirsha', pa: 'ਮੱਘਰ', gu: 'માર્ગશીર્ષ' },
+    { hi: 'पौष', en: 'Pausha', pa: 'ਪੋਹ', gu: 'પૌષ' },
+    { hi: 'माघ', en: 'Magha', pa: 'ਮਾਘ', gu: 'માઘ' },
+    { hi: 'फाल्गुन', en: 'Phalguna', pa: 'ਫੱਗਣ', gu: 'ફાલ્ગુન' },
+];
+const ADHIK = { hi: 'अधिक', en: 'Adhik', pa: 'ਅਧਿਕ', gu: 'અધિક' };
+const VS_LABEL = {
+    hi: 'विक्रम संवत्',
+    en: 'Vikram Samvat',
+    pa: 'ਵਿਕ੍ਰਮ ਸੰਵਤ',
+    gu: 'વિક્રમ સંવત',
+};
+const EKADASHI_NAME = {
+    hi: 'एकादशी (ग्यारस)', en: 'Ekadashi', pa: 'ਏਕਾਦਸ਼ੀ', gu: 'એકાદશી',
+};
+const PRADOSH_NAME = {
+    hi: 'प्रदोष व्रत', en: 'Pradosh Vrat', pa: 'ਪ੍ਰਦੋਸ਼ ਵਰਤ', gu: 'પ્રદોષ વ્રત',
+};
+const FESTIVALS = [
+    { hinduMonth: 11, tithiIdx: 10, tier: 'major',
+        names: { hi: 'फाल्गुन मेला (एकादशी)', en: 'Phalguna Mela (Ekadashi)', pa: 'ਫਾਲਗੁਨ ਮੇਲਾ', gu: 'ફાલ્ગુન મેળો' } },
+    { hinduMonth: 11, tithiIdx: 11, tier: 'major',
+        names: { hi: 'श्याम बाबा प्रकटोत्सव', en: 'Shyam Baba Prakatotsav', pa: 'ਸ਼ਿਆਮ ਬਾਬਾ ਪ੍ਰਕਟੋਤਸਵ', gu: 'શ્યામ બાબા પ્રાગટ્યોત્સવ' } },
+    { hinduMonth: 11, tithiIdx: 14, tier: 'major', kaal: 'pradosh',
+        names: { hi: 'होलिका दहन', en: 'Holika Dahan', pa: 'ਹੋਲਿਕਾ ਦਹਨ', gu: 'હોલિકા દહન' } },
+    { hinduMonth: 11, tithiIdx: 28, tier: 'major', kaal: 'nishita',
+        names: { hi: 'महाशिवरात्रि', en: 'Maha Shivratri', pa: 'ਮਹਾਸ਼ਿਵਰਾਤਰੀ', gu: 'મહાશિવરાત્રી' } },
+    { hinduMonth: 0, tithiIdx: 8, tier: 'major', kaal: 'madhyahna',
+        names: { hi: 'राम नवमी', en: 'Ram Navami', pa: 'ਰਾਮ ਨੌਮੀ', gu: 'રામ નવમી' } },
+    { hinduMonth: 0, tithiIdx: 14, tier: 'major',
+        names: { hi: 'हनुमान जयंती', en: 'Hanuman Jayanti', pa: 'ਹਨੁਮਾਨ ਜੈਅੰਤੀ', gu: 'હનુમાન જયંતી' } },
+    { hinduMonth: 1, tithiIdx: 2, tier: 'major', kaal: 'purvahna',
+        names: { hi: 'अक्षय तृतीया', en: 'Akshaya Tritiya', pa: 'ਅਖੈ ਤੀਜ', gu: 'અક્ષય તૃતીયા' } },
+    { hinduMonth: 3, tithiIdx: 14, tier: 'major',
+        names: { hi: 'गुरु पूर्णिमा', en: 'Guru Purnima', pa: 'ਗੁਰੂ ਪੂਰਣਮਾਸ਼ੀ', gu: 'ગુરુ પૂર્ણિમા' } },
+    { hinduMonth: 4, tithiIdx: 14, tier: 'major',
+        names: { hi: 'रक्षा बंधन', en: 'Raksha Bandhan', pa: 'ਰੱਖੜੀ', gu: 'રક્ષાબંધન' } },
+    { hinduMonth: 5, tithiIdx: 3, tier: 'major', kaal: 'madhyahna',
+        names: { hi: 'गणेश चतुर्थी', en: 'Ganesh Chaturthi', pa: 'ਗਣੇਸ਼ ਚਤੁਰਥੀ', gu: 'ગણેશ ચતુર્થી' } },
+    { hinduMonth: 5, tithiIdx: 22, tier: 'major',
+        names: { hi: 'कृष्ण जन्माष्टमी', en: 'Krishna Janmashtami', pa: 'ਕ੍ਰਿਸ਼ਨ ਜਨਮਾਸ਼ਟਮੀ', gu: 'કૃષ્ણ જન્માષ્ટમી' } },
+    { hinduMonth: 6, tithiIdx: 0, tier: 'major', kaal: 'purvahna',
+        names: { hi: 'नवरात्रि शुरू', en: 'Navratri begins', pa: 'ਨਵਰਾਤਰੀ ਆਰੰਭ', gu: 'નવરાત્રિ આરંભ' } },
+    { hinduMonth: 6, tithiIdx: 9, tier: 'major', kaal: 'aparahna',
+        names: { hi: 'दशहरा', en: 'Dussehra', pa: 'ਦੁਸਹਿਰਾ', gu: 'દશેરા' } },
+    { hinduMonth: 6, tithiIdx: 14, tier: 'major', kaal: 'pradosh',
+        names: { hi: 'शरद पूर्णिमा', en: 'Sharad Purnima', pa: 'ਸ਼ਰਦ ਪੂਰਣਮਾਸ਼ੀ', gu: 'શરદ પૂર્ણિમા' } },
+    { hinduMonth: 7, tithiIdx: 18, tier: 'major', kaal: 'pradosh',
+        names: { hi: 'करवा चौथ', en: 'Karva Chauth', pa: 'ਕਰਵਾ ਚੌਥ', gu: 'કરવા ચોથ' } },
+    { hinduMonth: 7, tithiIdx: 27, tier: 'major', kaal: 'pradosh',
+        names: { hi: 'धनतेरस', en: 'Dhanteras', pa: 'ਧਨਤੇਰਸ', gu: 'ધનતેરસ' } },
+    { hinduMonth: 7, tithiIdx: 29, tier: 'major', kaal: 'pradosh',
+        names: { hi: 'दिवाली', en: 'Diwali', pa: 'ਦੀਵਾਲੀ', gu: 'દિવાળી' } },
+    { hinduMonth: 7, tithiIdx: 0, tier: 'major', kaal: 'purvahna',
+        names: { hi: 'गोवर्धन पूजा', en: 'Govardhan Puja', pa: 'ਗੋਵਰਧਨ ਪੂਜਾ', gu: 'ગોવર્ધન પૂજા' } },
+    { hinduMonth: 7, tithiIdx: 1, tier: 'major', kaal: 'madhyahna',
+        names: { hi: 'भैया दूज', en: 'Bhai Dooj', pa: 'ਭਾਈ ਦੂਜ', gu: 'ભાઈ બીજ' } },
+    { hinduMonth: 10, tithiIdx: 4, tier: 'major', kaal: 'madhyahna',
+        names: { hi: 'वसंत पंचमी', en: 'Vasant Panchami', pa: 'ਬਸੰਤ ਪੰਚਮੀ', gu: 'વસંત પંચમી' } },
+];
+function vratOffsetFrom(s, ek) {
+    const ti = sunriseTithi(s);
+    const prev = sunriseTithi(addDays(s, -1));
+    if (!(ti === ek || ti === ek + 1) || !(prev === ek - 1 || prev === ek - 2))
+        return null;
+    if (ti === ek + 1)
+        return -1;
+    const next = sunriseTithi(addDays(s, 1));
+    if (next === ek)
+        return 1;
+    return next === ek + 2 ? -1 : 0;
+}
+function getEkadashiVrat(day) {
+    for (const ek of [10, 25]) {
+        for (const offset of [-1, 0, 1]) {
+            if (vratOffsetFrom(addDays(day, -offset), ek) !== offset)
+                continue;
+            const lm = lunarMonthAt(sunriseOf(day));
+            return {
+                paksha: ek === 10 ? 'shukla' : 'krishna',
+                month: purnimantMonth(lm, ek),
+                adhik: lm.adhik,
+            };
+        }
+    }
+    return null;
+}
+function festivalOn(f, day) {
+    var _a;
+    const target = f.tithiIdx;
+    if (target === 10 || target === 25) {
+        const vrat = getEkadashiVrat(day);
+        return !!vrat && !vrat.adhik && vrat.month === f.hinduMonth
+            && vrat.paksha === (target === 10 ? 'shukla' : 'krishna');
+    }
+    const kaal = (_a = f.kaal) !== null && _a !== void 0 ? _a : 'udaya';
+    const covers = (d) => kaalTithis(d, kaal).includes(target);
+    if (covers(day)) {
+        if (covers(addDays(day, -1)))
+            return false;
+    }
+    else {
+        const end = kaalTithis(day, kaal)[1];
+        const nextStart = kaalTithis(addDays(day, 1), kaal)[0];
+        if (!((end + 1) % 30 === target && nextStart === (target + 1) % 30))
+            return false;
+    }
+    const lm = lunarMonthAt(new Date(kaalWindow(day, kaal)[0]));
+    return !lm.adhik && purnimantMonth(lm, target) === f.hinduMonth;
+}
+function pradoshShare(day, t) {
+    const [a, b] = kaalWindow(day, 'pradosh');
+    const [ta, tb] = kaalTithis(day, 'pradosh');
+    if (ta === t && tb === t)
+        return b - a;
+    if (ta === t)
+        return findNextTithiBoundary(new Date(a), (t + 1) % 30).getTime() - a;
+    if (tb === t)
+        return b - findNextTithiBoundary(new Date(a), t).getTime();
+    return 0;
+}
+function pradoshOn(day) {
+    return [12, 27].some((t) => {
+        const share = pradoshShare(day, t);
+        if (share > 0) {
+            return share > pradoshShare(addDays(day, -1), t) && share >= pradoshShare(addDays(day, 1), t);
+        }
+        const end = kaalTithis(day, 'pradosh')[1];
+        const nextStart = kaalTithis(addDays(day, 1), 'pradosh')[0];
+        return (end + 1) % 30 === t && nextStart === (t + 1) % 30;
+    });
+}
+const festivalCache = new Map();
+function getFestivalForDate(day, language) {
+    const key = `${day.getFullYear()}-${day.getMonth()}-${day.getDate()}`;
+    let hit = festivalCache.get(key);
+    if (hit === undefined) {
+        const idx = FESTIVALS.findIndex((f) => festivalOn(f, day));
+        hit = idx >= 0 ? idx
+            : getEkadashiVrat(day) ? -1
+                : pradoshOn(day) ? -2
+                    : null;
+        festivalCache.set(key, hit);
+    }
+    if (hit === null)
+        return null;
+    if (hit === -1)
+        return { name: EKADASHI_NAME[language], tier: 'ekadashi' };
+    if (hit === -2)
+        return { name: PRADOSH_NAME[language], tier: 'pradosh' };
+    return { name: FESTIVALS[hit].names[language], tier: FESTIVALS[hit].tier };
+}
+function getDayEvents(day, language) {
+    const majors = FESTIVALS.filter((f) => festivalOn(f, day));
+    const out = majors.map((f) => ({ name: f.names[language], tier: f.tier }));
+    const ekadashiFestival = majors.some((f) => f.tithiIdx === 10 || f.tithiIdx === 25);
+    if (!ekadashiFestival && getEkadashiVrat(day))
+        out.push({ name: EKADASHI_NAME[language], tier: 'ekadashi' });
+    if (pradoshOn(day))
+        out.push({ name: PRADOSH_NAME[language], tier: 'pradosh' });
+    return out;
+}
+function getTithiIndicator(day) {
+    const idx = sunriseTithi(day);
+    return {
+        idx,
+        paksha: idx < 15 ? 'shukla' : 'krishna',
+        isPurnima: idx === 14,
+        isAmavasya: idx === 29,
+        tithiNum: (idx % 15) + 1,
+    };
+}
+function getPanchang(date, language) {
+    const ti = tithiIndex(date);
+    const paksha = ti < 15 ? 'shukla' : 'krishna';
+    const lm = lunarMonthAt(date);
+    const monthName = HINDU_MONTHS[purnimantMonth(lm, ti)][language];
+    return {
+        vsLabel: VS_LABEL[language],
+        vsYear: getVikramSamvat(lm),
+        hinduMonth: lm.adhik ? `${ADHIK[language]} ${monthName}` : monthName,
+        paksha: PAKSHA[paksha][language],
+        tithi: TITHI_NAMES[ti][language],
+    };
+}
+function tithiName(idx, language) {
+    return TITHI_NAMES[idx][language];
+}
+function getTithiSpans(day, language) {
+    const nextRise = sunTimes(addDays(day, 1)).rise;
+    const spans = [];
+    let t = new Date(sunTimes(day).rise);
+    while (spans.length < 3) {
+        const idx = tithiIndex(t);
+        const end = findNextTithiBoundary(t, (idx + 1) % 30);
+        spans.push({ idx, name: TITHI_NAMES[idx][language], end });
+        if (end.getTime() >= nextRise)
+            break;
+        t = new Date(end.getTime() + 1000);
+    }
+    return spans;
+}
+const PERIOD = {
+    hi: { morning: 'सुबह', afternoon: 'दोपहर', evening: 'शाम', night: 'रात' },
+    en: { morning: 'morning', afternoon: 'afternoon', evening: 'evening', night: 'night' },
+    pa: { morning: 'ਸਵੇਰੇ', afternoon: 'ਦੁਪਹਿਰ', evening: 'ਸ਼ਾਮ', night: 'ਰਾਤ' },
+    gu: { morning: 'સવારે', afternoon: 'બપોરે', evening: 'સાંજે', night: 'રાત્રે' },
+};
+const DAY_LABELS = {
+    hi: ['आज', 'कल', 'परसों'],
+    en: ['today', 'tomorrow', 'day after'],
+    pa: ['ਅੱਜ', 'ਕੱਲ੍ਹ', 'ਪਰਸੋਂ'],
+    gu: ['આજ', 'કાલ', 'પરમ દિવસ'],
+};
+const BAJE = {
+    hi: ' बजे', en: '', pa: ' ਵਜੇ', gu: ' વાગ્યે',
+};
+function getNextTithiInfo(now, language) {
+    const currentTithiIdx = tithiIndex(now);
+    const nextTithiIdx = (currentTithiIdx + 1) % 30;
+    const nextTime = findNextTithiBoundary(now, nextTithiIdx);
+    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+    const nextStart = new Date(nextTime.getFullYear(), nextTime.getMonth(), nextTime.getDate()).getTime();
+    const diffDays = Math.round((nextStart - todayStart) / 86400000);
+    const dayLabel = DAY_LABELS[language][Math.min(diffDays, 2)];
+    const h = nextTime.getHours();
+    const m = nextTime.getMinutes();
+    const period = h < 5 ? 'night' : h < 12 ? 'morning' : h < 16 ? 'afternoon' : h < 19 ? 'evening' : 'night';
+    const periodStr = PERIOD[language][period];
+    const h12 = h % 12 || 12;
+    const timeStr = `${h12}:${String(m).padStart(2, '0')}`;
+    const ampm = language === 'en' ? (h < 12 ? ' AM' : ' PM') : '';
+    const label = `${dayLabel} ${periodStr} ${timeStr}${ampm}${BAJE[language]}`;
+    return {
+        name: TITHI_NAMES[nextTithiIdx][language],
+        label,
+    };
+}
+const PAHAR_NAMES = {
+    amritVela: { hi: 'अमृत वेला', en: 'Amrit Vela', pa: 'ਅੰਮ੍ਰਿਤ ਵੇਲਾ', gu: 'અમૃત વેળા' },
+    pratah: { hi: 'प्रातः काल', en: 'Pratah Kaal', pa: 'ਪ੍ਰਾਤਃ ਕਾਲ', gu: 'પ્રાતઃ કાળ' },
+    purvahna: { hi: 'पूर्वाह्न', en: 'Purvahna', pa: 'ਪੂਰਵਾਹਨ', gu: 'પૂર્વાહ્ન' },
+    madhyahna: { hi: 'मध्याह्न', en: 'Madhyahna', pa: 'ਮੱਧਿਆਨ੍ਹ', gu: 'મધ્યાહ્ન' },
+    aparahna: { hi: 'अपराह्न', en: 'Aparahna', pa: 'ਅਪਰਾਹਨ', gu: 'અપરાહ્ન' },
+    sandhya: { hi: 'संध्या वेला', en: 'Sandhya Vela', pa: 'ਸੰਧਿਆ ਵੇਲਾ', gu: 'સંધ્યા વેળા' },
+    pradosh: { hi: 'प्रदोष काल', en: 'Pradosh Kaal', pa: 'ਪ੍ਰਦੋਸ਼ ਕਾਲ', gu: 'પ્રદોષ કાળ' },
+    ratri: { hi: 'रात्रि काल', en: 'Ratri Kaal', pa: 'ਰਾਤਰੀ ਕਾਲ', gu: 'રાત્રિ કાળ' },
+};
+const PAHAR_BOUNDARIES = [
+    { start: 4 * 60, pahar: 'amritVela' },
+    { start: 5 * 60 + 30, pahar: 'pratah' },
+    { start: 8 * 60, pahar: 'purvahna' },
+    { start: 11 * 60, pahar: 'madhyahna' },
+    { start: 13 * 60, pahar: 'aparahna' },
+    { start: 16 * 60, pahar: 'sandhya' },
+    { start: 18 * 60 + 30, pahar: 'pradosh' },
+    { start: 21 * 60, pahar: 'ratri' },
+];
+function paharOf(date) {
+    const minutes = date.getHours() * 60 + date.getMinutes();
+    let current = 'ratri';
+    for (const b of PAHAR_BOUNDARIES) {
+        if (minutes >= b.start)
+            current = b.pahar;
+        else
+            break;
+    }
+    return current;
+}
+function getPahar(date, language) {
+    return PAHAR_NAMES[paharOf(date)][language];
+}
+function format12h(minutesOfDay) {
+    const m = ((minutesOfDay % 1440) + 1440) % 1440;
+    const h24 = Math.floor(m / 60);
+    const mm = m % 60;
+    const ampm = h24 >= 12 ? 'PM' : 'AM';
+    const h12 = h24 % 12 || 12;
+    return `${h12}:${String(mm).padStart(2, '0')} ${ampm}`;
+}
+const NEXT_PAHAR_SENTENCE = {
+    hi: (t, p) => `${t} पर ${p} शुरू हो जाएगा`,
+    en: (t, p) => `${p} starts at ${t}`,
+    pa: (t, p) => `${t} ਵਜੇ ${p} ਸ਼ੁਰੂ ਹੋ ਜਾਵੇਗਾ`,
+    gu: (t, p) => `${t} પર ${p} શરૂ થશે`,
+};
+function getNextPaharInfo(date, language) {
+    const minutes = date.getHours() * 60 + date.getMinutes();
+    for (const b of PAHAR_BOUNDARIES) {
+        if (b.start > minutes) {
+            const name = PAHAR_NAMES[b.pahar][language];
+            const startTime = format12h(b.start);
+            return { name, startTime, sentence: NEXT_PAHAR_SENTENCE[language](startTime, name) };
+        }
+    }
+    const name = PAHAR_NAMES.amritVela[language];
+    const startTime = format12h(4 * 60);
+    return { name, startTime, sentence: NEXT_PAHAR_SENTENCE[language](startTime, name) };
+}
+
+},
+"./ekadashi": function (module, exports, require) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.parseLocalDate = parseLocalDate;
+exports.getEkadashisForYear = getEkadashisForYear;
+exports.getUpcomingEkadashis = getUpcomingEkadashis;
+exports.getNextEkadashi = getNextEkadashi;
+exports.isTodayEkadashi = isTodayEkadashi;
+exports.groupByMonth = groupByMonth;
+exports.formatDateLocalized = formatDateLocalized;
+const panchang_1 = require("./panchang");
+const NAMES = [
+    [
+        {
+            name: { hi: 'पापमोचनी एकादशी', en: 'Papmochani Ekadashi', pa: 'ਪਾਪਮੋਚਨੀ ਏਕਾਦਸ਼ੀ', gu: 'પાપમોચની એકાદશી' },
+            notifDesc: 'सभी पापों से मुक्ति दिलाने वाली एकादशी। श्याम शरण में आएं। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'कामदा एकादशी', en: 'Kamada Ekadashi', pa: 'ਕਾਮਦਾ ਏਕਾਦਸ਼ੀ', gu: 'કામદા એકાદશી' },
+            notifDesc: 'मनोकामना पूर्ण करने वाली एकादशी। बाबा श्याम से दिल की मुराद मांगें। जय श्री श्याम! 🙏',
+        },
+    ],
+    [
+        {
+            name: { hi: 'वरुथिनी एकादशी', en: 'Varuthini Ekadashi', pa: 'ਵਰੂਥਿਨੀ ਏਕਾਦਸ਼ੀ', gu: 'વરૂથિની એકાદશી' },
+            notifDesc: 'इस व्रत का पुण्य अश्वमेध यज्ञ से भी अधिक है। श्याम भजन गाएं। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'मोहिनी एकादशी', en: 'Mohini Ekadashi', pa: 'ਮੋਹਿਨੀ ਏਕਾਦਸ਼ੀ', gu: 'મોહિની એકાદશી' },
+            notifDesc: 'माया-मोह से मुक्ति का पावन दिन। श्री श्याम जी का नाम जपें। जय श्री श्याम! 🙏',
+        },
+    ],
+    [
+        {
+            name: { hi: 'अपरा एकादशी', en: 'Apara Ekadashi', pa: 'ਅਪਰਾ ਏਕਾਦਸ਼ੀ', gu: 'અપરા એકાદશી' },
+            notifDesc: 'अपार पुण्य देने वाला पावन व्रत। श्री श्याम जी का स्मरण करें। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'निर्जला एकादशी', en: 'Nirjala Ekadashi', pa: 'ਨਿਰਜਲਾ ਏਕਾਦਸ਼ੀ', gu: 'નિર્જળા એકાદશી' },
+            notifDesc: 'जल त्याग का महाव्रत — सभी एकादशियों का फल एक साथ मिलता है। जय श्री श्याम! 🙏',
+        },
+    ],
+    [
+        {
+            name: { hi: 'योगिनी एकादशी', en: 'Yogini Ekadashi', pa: 'ਯੋਗਿਨੀ ਏਕਾਦਸ਼ੀ', gu: 'યોગિની એકાદશી' },
+            notifDesc: 'योगिनी देवियों की कृपा प्राप्त करने का पावन दिन। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'देवशयनी एकादशी', en: 'Devshayani Ekadashi', pa: 'ਦੇਵਸ਼ਯਨੀ ਏਕਾਦਸ਼ੀ', gu: 'દેવશયની એકાદશી' },
+            notifDesc: 'देव शयन प्रारंभ — चातुर्मास का आरंभ। श्री श्याम जी का भजन गाएं। जय श्री श्याम! 🙏',
+        },
+    ],
+    [
+        {
+            name: { hi: 'कामिका एकादशी', en: 'Kamika Ekadashi', pa: 'ਕਾਮਿਕਾ ਏਕਾਦਸ਼ੀ', gu: 'કામિકા એકાદશી' },
+            notifDesc: 'तुलसी से भगवान विष्णु की पूजा का पावन दिन। श्री श्याम जी का स्मरण करें। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'श्रावण पुत्रदा एकादशी', en: 'Shravana Putrada Ekadashi', pa: 'ਸਾਵਣ ਪੁੱਤਰਦਾ ਏਕਾਦਸ਼ੀ', gu: 'શ્રાવણ પુત્રદા એકાદશી' },
+            notifDesc: 'संतान सुख और परिवार की मंगलकामना का पावन व्रत। जय श्री श्याम! 🙏',
+        },
+    ],
+    [
+        {
+            name: { hi: 'अजा एकादशी', en: 'Aja Ekadashi', pa: 'ਅਜਾ ਏਕਾਦਸ਼ੀ', gu: 'અજા એકાદશી' },
+            notifDesc: 'सभी पापों का नाश करने वाली पावन एकादशी। श्याम भक्ति में रहें। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'परिवर्तिनी एकादशी', en: 'Parivartini Ekadashi', pa: 'ਪਰਿਵਰਤਿਨੀ ਏਕਾਦਸ਼ੀ', gu: 'પરિવર્તિની એકાદશી' },
+            notifDesc: 'भगवान करवट बदलते हैं — यह विशेष पूजा का दिन है। जय श्री श्याम! 🙏',
+        },
+    ],
+    [
+        {
+            name: { hi: 'इंदिरा एकादशी', en: 'Indira Ekadashi', pa: 'ਇੰਦਿਰਾ ਏਕਾਦਸ਼ੀ', gu: 'ઇન્દિરા એકાદશી' },
+            notifDesc: 'पितरों की मुक्ति के लिए इस व्रत का विशेष महत्व है। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'पापांकुशा एकादशी', en: 'Papankusha Ekadashi', pa: 'ਪਾਪਾਂਕੁਸ਼ਾ ਏਕਾਦਸ਼ੀ', gu: 'પાપાંકુશા એકાદશી' },
+            notifDesc: 'पापों पर अंकुश लगाने वाली पावन एकादशी। श्याम शरण में आएं। जय श्री श्याम! 🙏',
+        },
+    ],
+    [
+        {
+            name: { hi: 'रमा एकादशी', en: 'Rama Ekadashi', pa: 'ਰਮਾ ਏਕਾਦਸ਼ੀ', gu: 'રમા એકાદશી' },
+            notifDesc: 'माँ लक्ष्मी की कृपा पाने का पावन व्रत। श्री श्याम जी की आराधना करें। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'देवउठनी एकादशी', en: 'Devuthani Ekadashi', pa: 'ਦੇਵਉਠਨੀ ਏਕਾਦਸ਼ੀ', gu: 'દેવઉઠની એકાદશી' },
+            notifDesc: 'देव जागरण का शुभ दिन! सभी मंगल कार्य आज से आरंभ होते हैं। जय श्री श्याम! 🙏',
+        },
+    ],
+    [
+        {
+            name: { hi: 'उत्पन्ना एकादशी', en: 'Utpanna Ekadashi', pa: 'ਉਤਪੰਨਾ ਏਕਾਦਸ਼ੀ', gu: 'ઉત્પન્ના એકાદશી' },
+            notifDesc: 'एकादशी माता के प्रकट होने का पावन दिन। व्रत रखें और भजन गाएं। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'मोक्षदा एकादशी', en: 'Mokshada Ekadashi', pa: 'ਮੋਕਸ਼ਦਾ ਏਕਾਦਸ਼ੀ', gu: 'મોક્ષદા એકાદશી' },
+            notifDesc: 'गीता जयंती! आज भगवान श्रीकृष्ण ने अर्जुन को गीता का ज्ञान दिया था। जय श्री श्याम! 🙏',
+        },
+    ],
+    [
+        {
+            name: { hi: 'सफला एकादशी', en: 'Saphala Ekadashi', pa: 'ਸਫਲਾ ਏਕਾਦਸ਼ੀ', gu: 'સફળા એકાદશી' },
+            notifDesc: 'सभी कार्यों में सफलता देने वाली पावन एकादशी। बाबा श्याम की शरण में आएं। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'पौष पुत्रदा एकादशी', en: 'Pausha Putrada Ekadashi', pa: 'ਪੋਹ ਪੁੱਤਰਦਾ ਏਕਾਦਸ਼ੀ', gu: 'પોષ પુત્રદા એકાદશી' },
+            notifDesc: 'संतान सुख और परिवार की मंगलकामना का पावन व्रत। जय श्री श्याम! 🙏',
+        },
+    ],
+    [
+        {
+            name: { hi: 'षट्तिला एकादशी', en: 'Shattila Ekadashi', pa: 'ਸ਼ੱਟਤਿਲਾ ਏਕਾਦਸ਼ੀ', gu: 'ષટ્તિલા એકાદશી' },
+            notifDesc: 'तिल दान और पूजा का विशेष दिन। श्री श्याम जी की भक्ति में लीन रहें। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'जया एकादशी', en: 'Jaya Ekadashi', pa: 'ਜਯਾ ਏਕਾਦਸ਼ੀ', gu: 'જયા એકાદશી' },
+            notifDesc: 'पितरों की मुक्ति और मोक्ष के लिए पावन व्रत। श्री श्याम जी का स्मरण करें। जय श्री श्याम! 🙏',
+        },
+    ],
+    [
+        {
+            name: { hi: 'विजया एकादशी', en: 'Vijaya Ekadashi', pa: 'ਵਿਜਯਾ ਏਕਾਦਸ਼ੀ', gu: 'વિજયા એકાદશી' },
+            notifDesc: 'विजय और सफलता प्राप्ति का पावन व्रत। बाबा श्याम की शरण में आएं। जय श्री श्याम! 🙏',
+        },
+        {
+            name: { hi: 'आमलकी एकादशी', en: 'Amalaki Ekadashi', pa: 'ਆਮਲਕੀ ਏਕਾਦਸ਼ੀ', gu: 'આમળકી એકાદશી' },
+            notifDesc: 'आंवले की पूजा से पाप नष्ट होते हैं। श्री श्याम जी का ध्यान करें। जय श्री श्याम! 🙏',
+        },
+    ],
+];
+const ADHIK_NAMES = [
+    {
+        name: { hi: 'परम एकादशी', en: 'Param Ekadashi', pa: 'ਪਰਮ ਏਕਾਦਸ਼ੀ', gu: 'પરમ એકાદશી' },
+        notifDesc: 'परम पुण्य की प्राप्ति का दिन। भक्ति भाव से व्रत रखें। जय श्री श्याम! 🙏',
+    },
+    {
+        name: { hi: 'पद्मिनी एकादशी', en: 'Padmini Ekadashi', pa: 'ਪਦਮਿਨੀ ਏਕਾਦਸ਼ੀ', gu: 'પદ્મિની એકાદશી' },
+        notifDesc: 'अधिक मास की दुर्लभ एकादशी। विशेष पुण्यफल का दिन। जय श्री श्याम! 🙏',
+    },
+];
+const pad2 = (n) => String(n).padStart(2, '0');
+const dateKey = (d) => `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+function parseLocalDate(dateStr) {
+    const [y, m, d] = dateStr.split('-').map(Number);
+    return new Date(y, m - 1, d);
+}
+function ekadashiOn(day) {
+    const vrat = (0, panchang_1.getEkadashiVrat)(day);
+    if (!vrat)
+        return null;
+    const pair = vrat.adhik ? ADHIK_NAMES : NAMES[vrat.month];
+    return Object.assign({ date: dateKey(day) }, pair[vrat.paksha === 'krishna' ? 0 : 1]);
+}
+const yearCache = new Map();
+function getEkadashisForYear(year) {
+    let list = yearCache.get(year);
+    if (!list) {
+        list = [];
+        for (let d = new Date(year, 0, 1); d.getFullYear() === year; d = new Date(year, d.getMonth(), d.getDate() + 1)) {
+            const ek = ekadashiOn(d);
+            if (ek)
+                list.push(ek);
+        }
+        yearCache.set(year, list);
+    }
+    return list;
+}
+function getUpcomingEkadashis(from, count) {
+    const fromKey = dateKey(from);
+    const out = [];
+    for (let y = from.getFullYear(); out.length < count; y++) {
+        for (const e of getEkadashisForYear(y)) {
+            if (e.date >= fromKey && out.length < count)
+                out.push(e);
+        }
+    }
+    return out;
+}
+function getNextEkadashi(t, today = new Date()) {
+    const [next] = getUpcomingEkadashis(today, 1);
+    if (!next)
+        return null;
+    const todayMid = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    const d = parseLocalDate(next.date);
+    const daysLeft = Math.round((d.getTime() - todayMid.getTime()) / 86400000);
+    const dayName = t.days[d.getDay()];
+    const dateLabel = `${d.getDate()} ${t.months[d.getMonth()]} ${d.getFullYear()}`;
+    return { date: next.date, name: next.name, daysLeft, dayName, dateLabel };
+}
+function isTodayEkadashi(today = new Date()) {
+    return (0, panchang_1.getEkadashiVrat)(today) !== null;
+}
+function groupByMonth(t, year) {
+    const map = {};
+    for (const e of getEkadashisForYear(year)) {
+        const m = parseLocalDate(e.date).getMonth();
+        if (!map[m])
+            map[m] = [];
+        map[m].push(e);
+    }
+    return Object.entries(map).map(([m, items]) => ({
+        monthIndex: Number(m),
+        month: t.months[Number(m)],
+        items,
+    }));
+}
+function formatDateLocalized(dateStr, t) {
+    const d = parseLocalDate(dateStr);
+    return `${t.days[d.getDay()]}, ${d.getDate()} ${t.months[d.getMonth()]}`;
+}
+
+}
+}, cache = {};
+function req(id) {
+  if (!defs[id]) return {};
+  if (!cache[id]) { var m = { exports: {} }; cache[id] = m; defs[id](m, m.exports, req); }
+  return cache[id].exports;
+}
+window.KP = { panchang: req("./panchang"), ekadashi: req("./ekadashi") };
+})();</script>
+<script>
+(function () {
+  'use strict';
+  var P = window.KP.panchang;
+  var esc = KA.esc, fill = KA.fill;
+  var SUPA_URL = 'https://bwmourpbnvbhjrlecazb.supabase.co';
+  var SUPA_KEY = 'sb_publishable_oG-acj9fST0d2tCl_fd5kg_mTe59aBo';
+  var WA_URL = 'https://whatsapp.com/channel/0029VbAy9mx7tkjFSWzRmi3V';
+  var CACHE_KEY = 'kd_daily_darshan_v1';
+  var AUTO_MS = 3500;
+
+  var T = {
+    pageTitle: { hi: 'आज के दर्शन — बाबा खाटू श्याम जी', en: "Today's Darshan — Baba Khatu Shyam Ji", pa: 'ਅੱਜ ਦੇ ਦਰਸ਼ਨ — ਬਾਬਾ ਖਾਟੂ ਸ਼ਿਆਮ ਜੀ', gu: 'આજના દર્શન — બાબા ખાટુ શ્યામ જી' },
+    title: { hi: 'आज के दर्शन', en: "Today's Darshan", pa: 'ਅੱਜ ਦੇ ਦਰਸ਼ਨ', gu: 'આજના દર્શન' },
+    sharePrompt: { hi: 'आज के दर्शन अपने परिवार व मित्रों के साथ शेयर करें 🙏', en: "Share today's darshan with your family and friends 🙏", pa: 'ਅੱਜ ਦੇ ਦਰਸ਼ਨ ਆਪਣੇ ਪਰਿਵਾਰ ਤੇ ਦੋਸਤਾਂ ਨਾਲ ਸ਼ੇਅਰ ਕਰੋ 🙏', gu: 'આજના દર્શન તમારા પરિવાર અને મિત્રો સાથે શેર કરો 🙏' },
+    share: { hi: 'शेयर करें', en: 'Share', pa: 'ਸ਼ੇਅਰ ਕਰੋ', gu: 'શેર કરો' },
+    updated: { hi: 'दर्शन अपडेट: {d}', en: 'Darshan updated: {d}', pa: 'ਦਰਸ਼ਨ ਅੱਪਡੇਟ: {d}', gu: 'દર્શન અપડેટ: {d}' },
+    waTitle: { hi: 'रोज़ के दर्शन WhatsApp पर', en: 'Daily darshan on WhatsApp', pa: 'ਰੋਜ਼ ਦੇ ਦਰਸ਼ਨ WhatsApp ਤੇ', gu: 'રોજના દર્શન WhatsApp પર' },
+    waSub: { hi: 'चैनल से जुड़ें — हर दिन नए दर्शन', en: 'Join the channel — new darshan every day', pa: 'ਚੈਨਲ ਨਾਲ ਜੁੜੋ — ਹਰ ਦਿਨ ਨਵੇਂ ਦਰਸ਼ਨ', gu: 'ચેનલ સાથે જોડાઓ — દરરોજ નવા દર્શન' },
+    vishesh: { hi: 'बाबा श्याम के दिव्य दर्शन', en: 'Divine darshan of Baba Shyam', pa: 'ਬਾਬਾ ਸ਼ਿਆਮ ਦੇ ਦਿਵ੍ਯ ਦਰਸ਼ਨ', gu: 'બાબા શ્યામના દિવ્ય દર્શન' },
+    visheshSub: { hi: 'हर एकादशी नए विशेष दर्शन · यहाँ देखें', en: 'New special darshan every Ekadashi', pa: 'ਹਰ ਏਕਾਦਸ਼ੀ ਨਵੇਂ ਖ਼ਾਸ ਦਰਸ਼ਨ', gu: 'દરેક એકાદશીએ નવા વિશેષ દર્શન' },
+    panchang: { hi: 'आज का पंचांग', en: "Today's Panchang", pa: 'ਅੱਜ ਦਾ ਪੰਚਾਂਗ', gu: 'આજનું પંચાંગ' },
+    panchangSub: { hi: 'तिथि, व्रत और त्योहार — खाटू धाम के अनुसार', en: 'Tithi, vrat and festivals — as per Khatu Dham', pa: 'ਤਿਥੀ, ਵਰਤ ਤੇ ਤਿਉਹਾਰ — ਖਾਟੂ ਧਾਮ ਅਨੁਸਾਰ', gu: 'તિથિ, વ્રત અને તહેવાર — ખાટુ ધામ મુજબ' },
+    empty: { hi: 'आज के दर्शन जल्द ही आ रहे हैं', en: "Today's darshan is coming soon", pa: 'ਅੱਜ ਦੇ ਦਰਸ਼ਨ ਜਲਦੀ ਆ ਰਹੇ ਹਨ', gu: 'આજના દર્શન જલદી આવી રહ્યા છે' },
+    offline: { hi: 'दर्शन लोड नहीं हो पाए — इंटरनेट चेक करें', en: "Couldn't load the darshan — check your internet", pa: 'ਦਰਸ਼ਨ ਲੋਡ ਨਹੀਂ ਹੋ ਸਕੇ — ਇੰਟਰਨੈੱਟ ਚੈੱਕ ਕਰੋ', gu: 'દર્શન લોડ ન થઈ શક્યા — ઇન્ટરનેટ તપાસો' },
+    retry: { hi: 'फिर कोशिश करें', en: 'Try again', pa: 'ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ', gu: 'ફરી પ્રયાસ કરો' },
+    close: { hi: 'बंद करें', en: 'Close', pa: 'ਬੰਦ ਕਰੋ', gu: 'બંધ કરો' },
+    nfTitle: { hi: 'यह पेज नहीं मिला', en: 'Page not found', pa: 'ਇਹ ਪੰਨਾ ਨਹੀਂ ਮਿਲਿਆ', gu: 'આ પેજ મળ્યું નથી' },
+    nfSub: { hi: 'कोई बात नहीं — बाबा श्याम के आज के दर्शन कीजिए 🙏', en: "No worries — have Baba Shyam's darshan today 🙏", pa: 'ਕੋਈ ਗੱਲ ਨਹੀਂ — ਬਾਬਾ ਸ਼ਿਆਮ ਦੇ ਅੱਜ ਦੇ ਦਰਸ਼ਨ ਕਰੋ 🙏', gu: 'કોઈ વાંધો નહીં — બાબા શ્યામના આજના દર્શન કરો 🙏' },
+    nfHome: { hi: 'होम पेज', en: 'Home page', pa: 'ਹੋਮ ਪੇਜ', gu: 'હોમ પેજ' },
+  };
+  // Served as the site's 404 page too (build-web.js writes /404.html).
+  var notFound = !KA.inApp && document.body.getAttribute('data-variant') === '404';
+  var PAKSHA = {
+    shukla: { hi: 'शुक्ल', en: 'Shukla', pa: 'ਸ਼ੁਕਲ', gu: 'શુક્લ' },
+    krishna: { hi: 'कृष्ण', en: 'Krishna', pa: 'ਕ੍ਰਿਸ਼ਨ', gu: 'કૃષ્ણ' },
+  };
+  var t = function (k) { return KA.tr(T[k]); };
+
+  var ICON = {
+    share: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>',
+    expand: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>',
+    chev: '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>',
+    cal: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
+    eye: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>',
+    wa: '<svg viewBox="0 0 24 24"><path fill="#25D366" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>',
+    close: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>',
+    prev: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>',
+    next: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>',
+  };
+
+  // ─── Data ──────────────────────────────────────────────────────────────────
+  // status: loading (nothing yet) | ready | empty (admin set none) | error
+  var state = { ids: [], updatedAt: null, status: 'loading', active: 0, fetchedAt: 0 };
+
+  try {
+    var cached = JSON.parse(KA.store.get(CACHE_KEY) || 'null');
+    if (cached && Array.isArray(cached.ids)) {
+      state.ids = cached.ids;
+      state.updatedAt = cached.updatedAt || null;
+      state.status = cached.ids.length ? 'ready' : 'empty';
+    }
+  } catch (e) { /* bad cache */ }
+
+  var imgUrl = function (id, w) {
+    return 'https://drive.google.com/thumbnail?id=' + encodeURIComponent(id) + '&sz=w' + w;
+  };
+  // Sharp on high-density phones without pulling a desktop-size file.
+  function slideWidth() {
+    var px = Math.min(window.innerWidth, 560) * (window.devicePixelRatio || 1);
+    return px > 1100 ? 1600 : px > 640 ? 1000 : 700;
+  }
+
+  function fetchLatest() {
+    state.fetchedAt = Date.now();
+    return fetch(SUPA_URL + '/rest/v1/daily_darshan?select=file_ids,updated_at&id=eq.1', {
+      headers: { apikey: SUPA_KEY, Accept: 'application/json' },
+      cache: 'no-store',
+    }).then(function (r) {
+      if (!r.ok) throw new Error(String(r.status));
+      return r.json();
+    }).then(function (rows) {
+      var row = rows && rows[0] ? rows[0] : {};
+      var ids = (row.file_ids || []).filter(function (s) { return s && String(s).trim(); })
+        .map(function (s) { return String(s).trim(); }).slice(0, 3);
+      var updatedAt = row.updated_at || null;
+      KA.store.set(CACHE_KEY, JSON.stringify({ ids: ids, updatedAt: updatedAt }));
+      var changed = ids.join() !== state.ids.join() || updatedAt !== state.updatedAt || state.status !== (ids.length ? 'ready' : 'empty');
+      state.ids = ids;
+      state.updatedAt = updatedAt;
+      state.status = ids.length ? 'ready' : 'empty';
+      if (changed) { state.active = 0; render(); }
+    }).catch(function () {
+      if (state.status === 'loading') { state.status = 'error'; render(); }
+    });
+  }
+
+  // Same text the app has always shared (WhatsApp channel + Play Store) —
+  // Hindi in every language, as before.
+  var HINDI_MONTHS = ['जनवरी', 'फ़रवरी', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर'];
+  function caption() {
+    var d = state.updatedAt ? KA.istDay(new Date(state.updatedAt)) : null;
+    var dateLabel = d ? d.getDate() + ' ' + HINDI_MONTHS[d.getMonth()] + ' ' + d.getFullYear() : '';
+    return [
+      '🌸 बाबा श्याम के आज के दिव्य दर्शन 🌸',
+      'आज के दर्शन के लिए इस लिंक पर क्लिक करें 👉 ' + WA_URL,
+      dateLabel ? '📅 ' + dateLabel : '',
+      'जय श्री श्याम 🙏',
+      'बाबा खाटू श्याम जी के रोज़ नए दर्शन, आरती, भजन, कीर्तन और नाम जप — सब एक ही ऐप में।',
+      '📿 आप भी नाम जप संकल्प से जुड़ें — हर जप का lifetime count, माला (108) tracking और वेगवान जप mode।',
+      '📱 ऐप डाउनलोड करें:',
+      KA.PLAY_URL,
+    ].filter(Boolean).join('\n');
+  }
+
+  // ─── Render ────────────────────────────────────────────────────────────────
+  var app = document.getElementById('app');
+  var timer = null;
+  var resumeAt = 0;
+  var hidden = false;
+
+  function head() {
+    var d = KA.today();
+    var first = P.getTithiSpans(d, KA.lang)[0];
+    var pc = P.getPanchang(P.sunriseOf(d), KA.lang);
+    var tithi = pc.hinduMonth + ' ' + KA.tr(PAKSHA[first.idx < 15 ? 'shukla' : 'krishna']) + ' ' + first.name;
+    return '<header class="head">' +
+      '<h1 class="title"><span aria-hidden="true">🌸</span><span class="shine">' + esc(t('title')) + '</span></h1>' +
+      '<div class="sub"><span>' + esc(KA.longDate(d)) + '</span>' +
+      '<button class="tithi-chip tap" id="tithi">' + ICON.cal + esc(tithi) + '</button></div>' +
+      '</header>';
+  }
+
+  function viewer() {
+    if (state.status === 'loading') {
+      return '<section class="viewer"><span class="frame skel"></span></section>';
+    }
+    if (state.status === 'error' || state.status === 'empty') {
+      var err = state.status === 'error';
+      return '<section class="card state"><div class="state-icon">' + (err ? '📶' : '🙏') + '</div>' +
+        '<p>' + esc(t(err ? 'offline' : 'empty')) + '</p>' +
+        (err ? '<button class="retry tap" id="retry">' + esc(t('retry')) + '</button>' : '') + '</section>';
+    }
+    var w = slideWidth();
+    var slides = state.ids.map(function (id, i) {
+      return '<button class="slide" data-i="' + i + '" aria-label="' + esc(t('title') + ' ' + (i + 1)) + '">' +
+        '<span class="frame skel"><img alt="" decoding="async"' + (i ? ' loading="lazy"' : '') + ' src="' + imgUrl(id, w) + '"></span>' +
+        '<span class="zoom">' + ICON.expand + '</span></button>';
+    }).join('');
+    var dots = state.ids.length > 1
+      ? '<div class="dots">' + state.ids.map(function (_, i) { return '<i' + (i === state.active ? ' class="on"' : '') + '></i>'; }).join('') + '</div>'
+      : '';
+    var updated = state.updatedAt
+      ? '<p class="updated">' + esc(fill(t('updated'), { d: KA.dayMonth(KA.istDay(new Date(state.updatedAt))) + ', ' + KA.time(new Date(state.updatedAt)) })) + '</p>'
+      : '';
+    return '<section class="viewer"><div class="viewer-glow"></div><div class="track" id="track">' + slides + '</div>' + dots + '</section>' +
+      '<section class="share-box"><p class="share-prompt">' + esc(t('sharePrompt')) + '</p>' +
+      '<button class="share-btn" id="share">' + ICON.share + '<span>' + esc(t('share')) + '</span></button>' + updated + '</section>';
+  }
+
+  function links() {
+    var card = function (id, iconCls, icon, title, sub, href) {
+      var inner = '<span class="li-icon ' + iconCls + '">' + icon + '</span>' +
+        '<span class="li-body"><b>' + esc(title) + '</b><small>' + esc(sub) + '</small></span>' + ICON.chev;
+      return href
+        ? '<a class="link-card tap" href="' + href + '">' + inner + '</a>'
+        : '<button class="link-card tap" id="' + id + '">' + inner + '</button>';
+    };
+    return '<section class="links">' +
+      card('wa', 'wa', ICON.wa, t('waTitle'), t('waSub')) +
+      (KA.inApp
+        ? card('vishesh', 'gold', ICON.eye, t('vishesh'), t('visheshSub'))
+        : card('', 'gold', ICON.cal, t('panchang'), t('panchangSub'), '/panchang/')) +
+      '</section>';
+  }
+
+  function render() {
+    document.title = (notFound ? t('nfTitle') + ' · ' : '') + t('pageTitle');
+    if (notFound) {
+      document.getElementById('nf').innerHTML = '<div class="nf-card"><span class="nf-code">404</span>' +
+        '<span class="nf-text"><b>' + esc(t('nfTitle')) + '</b><small>' + esc(t('nfSub')) + '</small></span>' +
+        '<a class="nf-home tap" href="/">' + esc(t('nfHome')) + '</a></div>';
+    }
+    app.innerHTML = head() + viewer() + links();
+    bindImages();
+    bindCarousel();
+  }
+
+  function bindImages() {
+    Array.prototype.forEach.call(app.querySelectorAll('.frame img'), function (img) {
+      var frame = img.parentNode;
+      var done = function () { frame.classList.remove('skel'); img.classList.add('in'); };
+      var fail = function () { frame.classList.remove('skel'); frame.classList.add('broken'); };
+      if (img.complete && img.naturalWidth) done();
+      else { img.addEventListener('load', done); img.addEventListener('error', fail); }
+    });
+  }
+
+  function bindCarousel() {
+    clearInterval(timer);
+    var track = document.getElementById('track');
+    if (!track) return;
+    var dots = app.querySelectorAll('.dots i');
+    var n = state.ids.length;
+    if (state.active) track.scrollLeft = state.active * track.clientWidth;
+    track.addEventListener('scroll', function () {
+      var i = Math.round(track.scrollLeft / Math.max(1, track.clientWidth));
+      if (i === state.active) return;
+      state.active = i;
+      Array.prototype.forEach.call(dots, function (d, j) { d.classList.toggle('on', j === i); });
+    }, { passive: true });
+    var hold = function () { resumeAt = Date.now() + 6000; };
+    track.addEventListener('touchstart', hold, { passive: true });
+    track.addEventListener('pointerdown', hold);
+    if (n > 1) {
+      timer = setInterval(function () {
+        if (hidden || document.hidden || Date.now() < resumeAt) return;
+        var next = (state.active + 1) % n;
+        track.scrollTo({ left: next * track.clientWidth, behavior: 'smooth' });
+      }, AUTO_MS);
+    }
+  }
+
+  // ─── Actions ───────────────────────────────────────────────────────────────
+  function openImage(i) {
+    var id = state.ids[i];
+    if (!id) return;
+    KA.haptic();
+    if (KA.inApp) {
+      KA.post({ t: 'image', id: id, shareText: caption() });
+      return;
+    }
+    lightbox(i);
+  }
+
+  function lightbox(i) {
+    var box = document.createElement('div');
+    box.className = 'lb';
+    var many = state.ids.length > 1;
+    var paint = function () {
+      box.innerHTML = '<img alt="" src="' + imgUrl(state.ids[i], 1600) + '">' +
+        '<button class="lb-btn lb-close tap" data-a="close" aria-label="' + esc(t('close')) + '">' + ICON.close + '</button>' +
+        (many ? '<button class="lb-btn lb-prev tap" data-a="prev" aria-label="‹">' + ICON.prev + '</button>' +
+                '<button class="lb-btn lb-next tap" data-a="next" aria-label="›">' + ICON.next + '</button>' : '') +
+        '<button class="share-btn" data-a="share">' + ICON.share + '<span>' + esc(t('share')) + '</span></button>';
+    };
+    var close = function () {
+      box.classList.remove('show');
+      document.removeEventListener('keydown', onKey);
+      setTimeout(function () { box.remove(); }, 200);
+    };
+    var step = function (dir) { i = (i + dir + state.ids.length) % state.ids.length; paint(); };
+    var onKey = function (e) {
+      if (e.key === 'Escape') close();
+      else if (many && e.key === 'ArrowRight') step(1);
+      else if (many && e.key === 'ArrowLeft') step(-1);
+    };
+    box.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      var a = b ? b.dataset.a : (e.target.tagName === 'IMG' ? null : 'close');
+      if (a === 'close') close();
+      else if (a === 'prev') step(-1);
+      else if (a === 'next') step(1);
+      else if (a === 'share') KA.share(caption(), t('title'));
+    });
+    document.addEventListener('keydown', onKey);
+    paint();
+    document.body.appendChild(box);
+    requestAnimationFrame(function () { box.classList.add('show'); });
+  }
+
+  app.addEventListener('click', function (e) {
+    var slide = e.target.closest('.slide');
+    if (slide) return openImage(+slide.dataset.i);
+    var b = e.target.closest('button');
+    if (!b) return;
+    if (b.id === 'share') { KA.haptic(); KA.share(caption(), t('title')); }
+    else if (b.id === 'retry') { KA.haptic(); state.status = 'loading'; render(); fetchLatest(); }
+    else if (b.id === 'wa') { KA.haptic(); KA.open(WA_URL); }
+    else if (b.id === 'vishesh') { KA.haptic(); KA.post({ t: 'nav', screen: 'Darshan' }); }
+    else if (b.id === 'tithi') {
+      KA.haptic();
+      if (KA.inApp) KA.post({ t: 'panchang' });
+      else location.href = '/panchang/';
+    }
+  });
+
+  KA.on(function (m) {
+    if (m.t === 'lang') render();
+    else if (m.t === 'focus') {
+      hidden = false;
+      // The tab stays mounted all day — refresh the header date and the images.
+      document.querySelector('.head').outerHTML = head();
+      if (Date.now() - state.fetchedAt > 5 * 60000) fetchLatest();
+    } else if (m.t === 'blur') hidden = true;
+  });
+
+  KA.chrome(notFound ? '' : 'darshan');
+  render();
+  KA.ready();
+  fetchLatest();
+})();
+</script>
+</body>
+</html>
