@@ -41,6 +41,9 @@
 </script>
 <style>
   body { background: #140b4f; }
+  /* Space/Enter work as a tap (e.g. on the jap pad) — but the browser's
+     keyboard focus ring after that gives the web away. */
+  #root :focus, #root :focus-visible { outline: none; }
   #desk { display: none; }
   html.desk body { margin: 0; overflow: auto; background: radial-gradient(120% 90% at 30% 10%, #4e22a8 0%, #2e1478 45%, #140b4f 100%) fixed; }
   html.desk #root { display: none; }
@@ -78,11 +81,11 @@
     <a class="desk-btn" href="https://play.google.com/store/apps/details?id=com.whokumar.khatushyamkirtan" target="_blank" rel="noopener">Google Play से ऐप डाउनलोड करें</a>
     <div class="desk-links"><a href="/darshan/">आज के दर्शन</a><a href="/panchang/">पंचांग</a><a href="/">होम</a></div>
   </div>
-  <div class="desk-phone"><iframe id="desk-frame" title="Khatu Shyam Ji Kirtan"></iframe></div>
+  <div class="desk-phone"><iframe id="desk-frame" title="Khatu Shyam Ji Kirtan" allow="clipboard-read; clipboard-write"></iframe></div>
 </div>
   <script>
     if (window.__KHATU_DESK) document.getElementById('desk-frame').src = location.pathname + location.search;
-    else { var s = document.createElement('script'); s.src = "/app/_expo/static/js/web/index-5b375d5d8e8dc75a1003d8217cca5e79.js"; document.body.appendChild(s); }
+    else { var s = document.createElement('script'); s.src = "/app/_expo/static/js/web/index-4f1aa502d59917f39098307483159c6e.js"; document.body.appendChild(s); }
   </script>
 </body>
 </html>
