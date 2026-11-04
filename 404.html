@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="khatu-page" content="notfound;v=2026-11-03T11:32:52Z;bridge=1">
+<meta name="khatu-page" content="notfound;v=2026-11-04T12:49:11Z;bridge=1">
 <meta name="theme-color" content="#3a0b1f">
 <title>आज के दर्शन — बाबा खाटू श्याम जी</title>
 <meta name="description" content="बाबा खाटू श्याम जी के आज के दिव्य दर्शन — रोज़ नए दर्शन, परिवार व मित्रों के साथ शेयर करें। जय श्री श्याम 🙏">
@@ -465,15 +465,44 @@ html.in-app.scrolled .head { box-shadow: 0 1px 0 rgba(247, 195, 95, 0.14), 0 8px
 }
 
 /* ── Website lightbox ── */
-.lb { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: rgba(0, 0, 0, 0.94); opacity: 0; transition: opacity 0.2s ease; }
+/* The whole image, framed like the card on the page; Share sits below it
+   instead of over it. Top padding keeps the close button off the image. */
+.lb {
+  --lb-top: calc(74px + var(--safe-top));
+  --lb-bottom: calc(22px + var(--safe-bottom));
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: var(--lb-top) 16px var(--lb-bottom);
+  background: rgba(0, 0, 0, 0.94);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
 .lb.show { opacity: 1; }
-.lb img { max-width: 100vw; max-height: 100vh; max-height: 100dvh; object-fit: contain; }
+.lb img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - var(--lb-top) - var(--lb-bottom) - 66px);
+  max-height: calc(100dvh - var(--lb-top) - var(--lb-bottom) - 66px);
+  border: 2px solid var(--gold);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(247, 195, 95, 0.22);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.lb img.in { opacity: 1; }
+@media (min-width: 700px) { .lb { padding-left: 82px; padding-right: 82px; } }
 .lb-btn { position: absolute; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, 0.16); }
 .lb-btn svg { width: 24px; height: 24px; stroke: #fff; }
 .lb-close { top: calc(14px + var(--safe-top)); right: 16px; }
 .lb-prev { left: 16px; top: 50%; margin-top: -23px; }
 .lb-next { right: 16px; top: 50%; margin-top: -23px; }
-.lb .share-btn { position: absolute; left: 50%; bottom: calc(26px + var(--safe-bottom)); transform: translateX(-50%); animation: none; }
+.lb .share-btn { flex: none; animation: none; }
 
 @media (min-width: 960px) {
   .wrap {
@@ -1746,6 +1775,14 @@ window.KP = { panchang: req("./panchang"), ekadashi: req("./ekadashi") };
         (many ? '<button class="lb-btn lb-prev tap" data-a="prev" aria-label="‹">' + ICON.prev + '</button>' +
                 '<button class="lb-btn lb-next tap" data-a="next" aria-label="›">' + ICON.next + '</button>' : '') +
         '<button class="share-btn" data-a="share">' + ICON.share + '<span>' + esc(t('share')) + '</span></button>';
+      // Fade in once loaded, so the gold frame doesn't flash empty first.
+      var img = box.querySelector('img');
+      var shown = function () { img.classList.add('in'); };
+      if (img.complete && img.naturalWidth) shown();
+      else {
+        img.addEventListener('load', shown);
+        img.addEventListener('error', function () { img.style.display = 'none'; });
+      }
     };
     var close = function () {
       box.classList.remove('show');
