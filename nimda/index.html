@@ -43,6 +43,11 @@
 </script>
 <style>
   body { background: #140b4f; }
+  /* Phone browsers: height 100% (Expo's reset) can stay shorter than the
+     visible screen once the address bar collapses — the tab bar then ended
+     above the bottom edge and the closed Panchang sheet showed in the strip
+     below it. dvh follows the visible screen. */
+  @supports (height: 100dvh) { html, body, #root { height: 100dvh; } }
   /* Space/Enter work as a tap (e.g. on the jap pad) — but the browser's
      keyboard focus ring after that gives the web away. */
   #root :focus, #root :focus-visible { outline: none; }
@@ -80,7 +85,7 @@
 </div>
   <script>
     if (window.__KHATU_DESK) document.getElementById('desk-frame').src = location.pathname + location.search;
-    else { var s = document.createElement('script'); s.src = "/app/_expo/static/js/web/index-ea301c3b8ba779c01186fd9052e9343c.js"; document.body.appendChild(s); }
+    else { var s = document.createElement('script'); s.src = "/app/_expo/static/js/web/index-b9f74d544a8a8e4a1af5595e79c3fe41.js"; document.body.appendChild(s); }
   </script>
 </body>
 </html>
